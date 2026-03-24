@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+title: About / Contact
+metaDescription: Learn about WPCNA, monthly meetings, and how to contact the White Plains Council of Neighborhood Associations.
+pageClass: page-about
+---
+{% from "components/macros.njk" import resourceCard %}
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero__content">
+    <p class="eyebrow">About WPCNA</p>
+    <h1>Neighborhood connection, not content clutter</h1>
+    <p>{{ site.mission }}</p>
+  </div>
+</section>
+
+<section class="section section--flush-top">
+  <div class="container about-grid">
+    <article>
+      <h2>What WPCNA does</h2>
+      <p>WPCNA brings neighborhood associations and residents into closer conversation with the city, with one another, and with the local institutions that shape everyday life in White Plains.</p>
+      <p>This rebuilt site focuses on fast answers for residents: what is happening, when it is happening, where it is, and what to click next.</p>
+
+      <h2 id="meetings">Monthly meetings</h2>
+      <p>{{ site.meetingNote }}</p>
+      <p><a class="text-link" href="https://wp-cna.org/agendas" target="_blank" rel="noreferrer">Open the current agendas archive</a></p>
+
+      <h2>Neighborhood framing</h2>
+      <p>The organization's original description calls White Plains a city of neighborhoods with rich history and active associations. This version keeps that civic framing while making the public-facing experience much easier to scan.</p>
+    </article>
+
+    <aside class="detail-card">
+      <p class="eyebrow">Contact</p>
+      <h2>{{ site.contactName }}</h2>
+      <p>{{ site.name }}</p>
+      <p>{{ site.location }}</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <a class="button button--block" href="mailto:{{ site.email }}">Email WPCNA</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container section__intro">
+    <div>
+      <p class="eyebrow">Trusted Source Links</p>
+      <h2>Useful official pages</h2>
+    </div>
+  </div>
+  <div class="container resource-grid">
+    {% for resource in resources %}
+      {{ resourceCard(resource) }}
+    {% endfor %}
+  </div>
+</section>

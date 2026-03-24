@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="eyebrow">About WPCNA</p>
+      <h2>{{ site.name }}</h2>
+      <p>{{ site.mission }}</p>
+    </div>
+
+    <div>
+      <p class="eyebrow">Contact</p>
+      <ul class="footer-list">
+        <li>{{ site.contactName }}</li>
+        <li>{{ site.location }}</li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="eyebrow">Community Channels</p>
+      <ul class="footer-list">
+        {% for link in site.communityChannels %}
+          <li><a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__meta">
+    <p>Curated from WPCNA and trusted White Plains community sources.</p>
+    <p><a href="{{ site.currentSiteUrl }}" target="_blank" rel="noreferrer">Current WPCNA site</a></p>
+  </div>
+</footer>
+

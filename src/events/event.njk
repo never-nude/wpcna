@@ -1,0 +1,140 @@
+---
+pagination:
+  data: eventStore.all
+  size: 1
+  alias: event
+permalink: "events/{{ event.slug }}/index.html"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ event.title }}"
+  metaDescription: "{{ event.shortSummary }}"
+  ogType: "article"
+  ogImage: "{{ event.image }}"
+  pageClass: "page-event-detail"
+---
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero__content">
+    <a class="back-link" href="{{ '/events/' | withPrefix }}">Back to all events</a>
+    <p class="eyebrow">{{ event.category }}</p>
+    <h1>{{ event.title }}</h1>
+    <p>{{ event.shortSummary }}</p>
+  </div>
+</section>
+
+<section class="section section--flush-top">
+  <div class="container detail-grid">
+    <article class="detail-main">
+      <div class="detail-image">
+        <img src="{{ event.image | withPrefix }}" alt="" loading="eager">
+      </div>
+
+      <div class="detail-copy">
+        <div class="detail-copy__meta">
+          <span class="tag">{{ event.status }}</span>
+          <span>Shared from {{ event.organizer }}</span>
+        </div>
+
+        <h2>About this event</h2>
+        {{ event.fullDescription | paragraphs | safe }}
+
+        {% if event.secondaryLinks.length %}
+          <div class="detail-links">
+            <h3>Additional links</h3>
+            <ul class="footer-list">
+              {% for link in event.secondaryLinks %}
+                <li><a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+
+    <aside class="detail-sidebar">
+      <div class="detail-card">
+        <p class="eyebrow">Key Details</p>
+        <dl class="detail-list">
+          <div>
+            <dt>Date</dt>
+            <dd>{{ event | dateLabel }}</dd>
+          </div>
+          <div>
+            <dt>Time</dt>
+            <dd>{{ event | timeLabel }}</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>{{ event.locationName }}</dd>
+          </div>
+          <div>
+            <dt>Address</dt>
+            <dd>{{ event.locationAddress }}</dd>
+          </div>
+          <div>
+            <dt>Source</dt>
+            <dd>{{ event.sourceLabel }}</dd>
+          </div>
+        </dl>
+
+        {% if event.primaryAction %}
+          <a class="button button--large button--block" href="{{ event.primaryAction.url }}" {% if event.primaryAction.url.startsWith("http") %}target="_blank" rel="noreferrer"{% endif %}>
+            {{ event.primaryAction.label }}
+          </a>
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% if event.relatedEvents.length %}
+  {% from "components/macros.njk" import eventCard %}
+  <section class="section section--tint">
+    <div class="container section__intro">
+      <div>
+        <p class="eyebrow">Related Events</p>
+        <h2>Keep exploring</h2>
+      </div>
+    </div>
+    <div class="container card-grid">
+      {% for related in event.relatedEvents %}
+        {{ eventCard(related) }}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% set startDateValue = event.startDate %}
+{% if event.startTime %}
+  {% set startDateValue = event.startDate + "T" + event.startTime + ":00-04:00" %}
+{% endif %}
+{% set endDateBase = event.endDate or event.startDate %}
+{% set endDateValue = endDateBase %}
+{% if event.endTime %}
+  {% set endDateValue = endDateBase + "T" + event.endTime + ":00-04:00" %}
+{% endif %}
+{% set eventStatusUrl = "https://schema.org/EventCompleted" %}
+{% if event.status == "upcoming" %}
+  {% set eventStatusUrl = "https://schema.org/EventScheduled" %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ event.title | json | safe }},
+  "description": {{ event.shortSummary | json | safe }},
+  "startDate": {{ startDateValue | json | safe }},
+  "endDate": {{ endDateValue | json | safe }},
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": {{ eventStatusUrl | json | safe }},
+  "location": {
+    "@type": "Place",
+    "name": {{ event.locationName | json | safe }},
+    "address": {{ event.locationAddress | json | safe }}
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": {{ event.organizer | json | safe }}
+  },
+  "url": {{ (page.url | absoluteUrl(site.baseUrl)) | json | safe }}
+}
+</script>

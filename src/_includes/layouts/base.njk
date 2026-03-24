@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% set pageTitle = site.name %}
+    {% if title and title != site.name %}
+      {% set pageTitle = title + " | " + site.shortName %}
+    {% endif %}
+    {% set pageDescription = metaDescription or site.mission %}
+    {% set canonicalUrl = page.url | absoluteUrl(site.baseUrl) %}
+    {% set socialImage = ogImage or site.defaultOgImage %}
+    {% set socialImage = socialImage | absoluteUrl(site.baseUrl) %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ pageDescription }}">
+    <link rel="canonical" href="{{ canonicalUrl }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:url" content="{{ canonicalUrl }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:image" content="{{ socialImage }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="{{ socialImage }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | withPrefix }}">
+    <script defer src="{{ '/assets/js/site.js' | withPrefix }}"></script>
+  </head>
+  <body class="{{ pageClass or '' }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include "components/header.njk" %}
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
+    {% include "components/footer.njk" %}
+  </body>
+</html>

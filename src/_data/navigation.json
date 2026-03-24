@@ -1,0 +1,15 @@
+[
+  {
+    "label": "Home",
+    "url": "/"
+  },
+  {
+    "label": "Events",
+    "url": "/events/"
+  },
+  {
+    "label": "About / Contact",
+    "url": "/about/"
+  }
+]
+

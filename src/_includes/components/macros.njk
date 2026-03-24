@@ -1,0 +1,44 @@
+{% macro eventCard(event, featured=false) %}
+  <article
+    class="event-card{% if featured %} event-card--featured{% endif %}"
+    data-event-card
+    data-category="{{ event.category }}"
+    data-month="{{ event.monthKey }}"
+    data-status="{{ event.status }}"
+    data-search="{{ event.searchText }}"
+  >
+    <a class="event-card__media" href="{{ event.detailUrl | withPrefix }}" aria-hidden="true" tabindex="-1">
+      <img src="{{ event.image | withPrefix }}" alt="" loading="lazy">
+    </a>
+    <div class="event-card__body">
+      <div class="event-card__topline">
+        <span class="tag">{{ event.category }}</span>
+        <span class="event-card__source">{{ event.organizer }}</span>
+      </div>
+      <h3><a href="{{ event.detailUrl | withPrefix }}">{{ event.title }}</a></h3>
+      <ul class="event-meta" aria-label="Event details">
+        <li>{{ event | shortDateLabel }}</li>
+        <li>{{ event | timeLabel }}</li>
+        <li>{{ event.locationName }}</li>
+      </ul>
+      <p>{{ event.shortSummary }}</p>
+      <div class="event-card__actions">
+        {% if event.primaryAction %}
+          <a class="button" href="{{ event.primaryAction.url }}" target="_blank" rel="noreferrer">
+            {{ event.primaryAction.label }}
+          </a>
+        {% endif %}
+        <a class="text-link" href="{{ event.detailUrl | withPrefix }}">View details</a>
+      </div>
+    </div>
+  </article>
+{% endmacro %}
+
+{% macro resourceCard(resource) %}
+  <article class="resource-card">
+    <p class="eyebrow">{{ resource.eyebrow }}</p>
+    <h3>{{ resource.title }}</h3>
+    <p>{{ resource.summary }}</p>
+    <a class="text-link" href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.ctaLabel }}</a>
+  </article>
+{% endmacro %}

@@ -1,0 +1,104 @@
+---
+layout: layouts/base.njk
+title: Events
+metaDescription: Explore upcoming and past White Plains events curated for residents by WPCNA.
+pageClass: page-events
+---
+{% from "components/macros.njk" import eventCard %}
+
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero__content">
+    <p class="eyebrow">Events</p>
+    <h1>Upcoming first. Archive second.</h1>
+    <p>Search, filter, and scan White Plains events without wading through pasted emails, raw PDFs, or duplicated navigation.</p>
+  </div>
+</section>
+
+<section class="section section--flush-top">
+  <div class="container">
+    <form class="filter-bar" data-event-filters>
+      <label>
+        <span>Search</span>
+        <input type="search" name="search" placeholder="Search events, locations, or tags">
+      </label>
+
+      <label>
+        <span>Category</span>
+        <select name="category">
+          <option value="">All categories</option>
+          {% for category in eventStore.categories %}
+            <option value="{{ category }}">{{ category }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label>
+        <span>Month</span>
+        <select name="month">
+          <option value="">All months</option>
+          {% for monthKey in eventStore.months %}
+            <option value="{{ monthKey }}">{{ monthKey | monthYearLabel }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <button class="button button--ghost" type="reset">Reset</button>
+    </form>
+  </div>
+</section>
+
+<section class="section section--flush-top" data-event-section>
+  <div class="container section__intro">
+    <div>
+      <p class="eyebrow">Upcoming Events</p>
+      <h2>Plan ahead</h2>
+    </div>
+    <p class="section__count" data-event-count>{{ eventStore.upcoming.length }} items</p>
+  </div>
+
+  {% if eventStore.upcoming.length %}
+    <div class="container card-grid">
+      {% for event in eventStore.upcoming %}
+        {{ eventCard(event) }}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="container empty-state">
+      <h3>No upcoming events yet.</h3>
+      <p>Add the next event to the structured data file and it will appear here automatically.</p>
+    </div>
+  {% endif %}
+
+  <div class="container empty-state empty-state--inline" hidden data-filter-empty>
+    <h3>No events match the current filters.</h3>
+    <p>Try clearing search terms or changing the category and month filters.</p>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <details class="archive-panel"{% if not eventStore.upcoming.length %} open{% endif %}>
+      <summary>
+        <span>
+          <span class="eyebrow">Past Events</span>
+          <strong>Browse the archive</strong>
+        </span>
+        <span class="archive-panel__count">{{ eventStore.past.length }} items</span>
+      </summary>
+
+      <div class="archive-panel__content" data-event-section>
+        <p class="archive-panel__intro">Past events stay available for reference, but they are visually de-emphasized so upcoming activity always leads the page.</p>
+        <div class="card-grid card-grid--past">
+          {% for event in eventStore.past %}
+            {{ eventCard(event) }}
+          {% endfor %}
+        </div>
+        <div class="empty-state empty-state--inline" hidden data-filter-empty>
+          <h3>No archived events match the current filters.</h3>
+          <p>Try a broader search or clear the current filters.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+

@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: 404.html
+title: Page Not Found
+metaDescription: The page you are looking for could not be found.
+pageClass: page-404
+---
+<section class="section">
+  <div class="container empty-state">
+    <p class="eyebrow">404</p>
+    <h1>That page is not here.</h1>
+    <p>Try the events index or return to the homepage.</p>
+    <div class="hero__actions">
+      <a class="button" href="{{ '/' | withPrefix }}">Go home</a>
+      <a class="button button--ghost" href="{{ '/events/' | withPrefix }}">Browse events</a>
+    </div>
+  </div>
+</section>

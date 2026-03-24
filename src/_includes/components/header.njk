@@ -1,0 +1,32 @@
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | withPrefix }}">
+      <span class="brand__mark" aria-hidden="true">WP</span>
+      <span class="brand__text">
+        <span class="brand__name">{{ site.shortName }}</span>
+        <span class="brand__sub">White Plains neighborhood events</span>
+      </span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-nav-toggle
+    >
+      <span class="nav-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav-menu>
+      <ul class="site-nav__list">
+        {% for item in navigation %}
+          {% set isCurrent = page.url == item.url or (item.url != "/" and page.url.startsWith(item.url)) %}
+          <li>
+            <a href="{{ item.url | withPrefix }}" {% if isCurrent %}aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
