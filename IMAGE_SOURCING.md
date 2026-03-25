@@ -8,8 +8,8 @@ This file documents the imagery currently used in the WPCNA site refresh and exp
 
 - File: `src/assets/img/photos/white-plains-main.jpeg`
 - Source: user-provided local image
-- Original file: `/Users/michael/Desktop/white plains.jpeg`
-- Notes: Copied into the project for the current hero and about image on March 25, 2026.
+- Original file: `/Users/michael/Desktop/white plains (1).jpeg`
+- Notes: Copied into the project for the current hero and about image on March 25, 2026, replacing the earlier local version.
 
 ### Alternate Rights-Clear White Plains Photography
 

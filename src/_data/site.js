@@ -14,11 +14,11 @@ module.exports = {
   currentSiteUrl: "https://wp-cna.org/",
   defaultOgImage: "/assets/img/photos/white-plains-main.jpeg",
   heroImage: "/assets/img/photos/white-plains-main.jpeg",
-  heroImageAlt: "Aerial view of downtown White Plains with residential neighborhoods and hills rising behind the skyline.",
+  heroImageAlt: "Aerial view of downtown White Plains with high-rise buildings, surrounding neighborhoods, and wooded hills beyond the skyline.",
   heroImageLabel: "White Plains from above",
   heroImageSummary: "Downtown at the center, with White Plains neighborhoods rising behind it.",
   aboutImage: "/assets/img/photos/white-plains-main.jpeg",
-  aboutImageAlt: "Aerial view of downtown White Plains with nearby neighborhoods in the background.",
+  aboutImageAlt: "Aerial view of downtown White Plains with nearby neighborhoods and hills in the background.",
   mission:
     "We're a group of neighborhood associations working together to help people stay informed and connected across White Plains.",
   meetingNote:
