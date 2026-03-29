@@ -76,7 +76,6 @@ function extractReferencePoints(description = "") {
 
 const heroBySlug = Object.fromEntries(
   neighborhoodHeroes
-    .filter((hero) => hero.status === "approved")
     .map((hero) => [
       hero.slug,
       {

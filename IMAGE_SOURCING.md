@@ -57,7 +57,7 @@ This system uses a mix of:
 
 - direct neighborhood matches where Wikimedia Commons surfaced a clearly relevant image
 - landmark-based matches where a nearby civic or institutional image better represents the neighborhood
-- no hero image on pages where a safe neighborhood-specific match has not been confirmed yet
+- one approved White Plains-wide fallback image where no safe neighborhood-specific option was strong enough
 
 Attribution is shown directly on neighborhood pages below the hero image.
 
