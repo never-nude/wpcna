@@ -15,6 +15,17 @@ const USER_AGENT =
 const LIBRARY_LOOKAHEAD_DAYS = 45;
 const CITY_MONTHS_AHEAD = 6;
 const PAST_RETENTION_DAYS = 60;
+const LIBRARY_MAX_REPEAT_COUNT = 2;
+const LIBRARY_MONTHLY_LIMIT = 15;
+
+const LIBRARY_ALWAYS_EXCLUDE_PATTERN =
+  /\b(homework help|video game time|tiny tots|toy time|storytime|vr storytime|vr fun|movie time|movie night|esl|english conversation|english classes|english for beginners|french conversation|low intermediate english|ged|citizenship classes|do gooders|tech tuesday|d&d|puzzle swap|stitching with friends|learn to crochet|crochet|beginner sewing|sewing class|kids yoga|paws to read|salsa for absolute beginners|read and stitch|book discussion|book club|club\b|minecraft|magic: the gathering|edge advisory board|after hours|afterplay|advisory board|scrabble|lego|board of trustees|appointment only|library closed)\b/i;
+
+const LIBRARY_BROAD_INTEREST_PATTERN =
+  /\b(workshop|discussion|open mic|concert|history|genealogy|financial aid|college|housing|discrimination|energy|narcan|interview|poetry|artificial intelligence|a\.i\.|3d printing|public service|county legislators|elder law|leadership|heritage|film screening|future is female|mental health|wellness|earth day|white plains|technology|samuel adams|antoni gaudi|janine antoni|craft-making|children's day|book day|brown bag|excel|google sheets|youth leadership|robert the guitar guy|storybook dancing|common ground)\b/i;
+
+const LIBRARY_HIGH_PRIORITY_PATTERN =
+  /\b(white plains|county|history|financial aid|college|housing|discrimination|energy|narcan|elder law|genealogy|county legislators|leadership|future is female|artificial intelligence|a\.i\.|3d printing|earth day|heritage|public service|interview|concert|film screening|open mic|poetry)\b/i;
 
 const CATEGORY_IMAGES = {
   "Arts": "/assets/img/events/arts.svg",
@@ -132,9 +143,15 @@ async function fetchLibraryEvents(todayParts) {
     encodeURIComponent(JSON.stringify(requestPayload));
   const items = await fetchJson(url);
 
-  return items
+  const candidates = items
     .map((item) => buildLibraryEvent(item, todayParts.iso))
     .filter(Boolean);
+  const titleCounts = buildTitleCounts(candidates);
+
+  return limitLibraryEventsByMonth(
+    candidates.filter((event) => shouldIncludeLibraryEvent(event, titleCounts)),
+    titleCounts
+  );
 }
 
 function buildLibraryEvent(item, todayIso) {
@@ -197,6 +214,90 @@ function buildLibraryEvent(item, todayIso) {
     sourceLabel: "Library calendar",
     importSource: "library"
   });
+}
+
+function shouldIncludeLibraryEvent(event, titleCounts) {
+  const title = cleanText(event.title).toLowerCase();
+  const haystack = `${event.title} ${event.shortSummary} ${event.fullDescription} ${(event.tags || []).join(" ")}`.toLowerCase();
+  const titleCount = titleCounts.get(title) || 0;
+
+  if (LIBRARY_ALWAYS_EXCLUDE_PATTERN.test(haystack)) {
+    return false;
+  }
+
+  if (titleCount > LIBRARY_MAX_REPEAT_COUNT) {
+    return false;
+  }
+
+  if (event.category === "Civic" || event.category === "Workshop") {
+    return true;
+  }
+
+  return LIBRARY_BROAD_INTEREST_PATTERN.test(haystack);
+}
+
+function limitLibraryEventsByMonth(events, titleCounts) {
+  const grouped = new Map();
+
+  for (const event of events) {
+    const monthKey = event.startDate.slice(0, 7);
+    grouped.set(monthKey, [...(grouped.get(monthKey) || []), event]);
+  }
+
+  return [...grouped.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .flatMap(([, monthEvents]) =>
+      monthEvents
+        .sort((a, b) => compareLibraryPriority(a, b, titleCounts))
+        .slice(0, LIBRARY_MONTHLY_LIMIT)
+    );
+}
+
+function compareLibraryPriority(a, b, titleCounts) {
+  const scoreDiff = scoreLibraryEvent(b, titleCounts) - scoreLibraryEvent(a, titleCounts);
+
+  if (scoreDiff !== 0) {
+    return scoreDiff;
+  }
+
+  const dateDiff = `${a.startDate}${a.startTime || "00:00"}`.localeCompare(`${b.startDate}${b.startTime || "00:00"}`);
+  if (dateDiff !== 0) {
+    return dateDiff;
+  }
+
+  return a.title.localeCompare(b.title);
+}
+
+function scoreLibraryEvent(event, titleCounts) {
+  const haystack = `${event.title} ${event.shortSummary} ${event.fullDescription} ${(event.tags || []).join(" ")}`.toLowerCase();
+  const titleCount = titleCounts.get(cleanText(event.title).toLowerCase()) || 0;
+  let score = 0;
+
+  if (event.category === "Workshop") {
+    score += 8;
+  } else if (event.category === "Civic") {
+    score += 7;
+  } else if (event.category === "Learning") {
+    score += 4;
+  } else {
+    score += 3;
+  }
+
+  if (LIBRARY_HIGH_PRIORITY_PATTERN.test(haystack)) {
+    score += 7;
+  }
+
+  if (/\b(white plains|county|local|neighborhood)\b/i.test(haystack)) {
+    score += 3;
+  }
+
+  if (/\b(workshop|discussion|lecture|series|screening|concert|open mic)\b/i.test(haystack)) {
+    score += 2;
+  }
+
+  score -= Math.max(0, titleCount - 1) * 2;
+
+  return score;
 }
 
 async function fetchCityEvents(todayParts) {
@@ -622,6 +723,14 @@ function dedupeImportedEvents(events) {
   }
 
   return deduped;
+}
+
+function buildTitleCounts(events) {
+  return events.reduce((counts, event) => {
+    const title = cleanText(event.title).toLowerCase();
+    counts.set(title, (counts.get(title) || 0) + 1);
+    return counts;
+  }, new Map());
 }
 
 function importedEventKeys(event) {

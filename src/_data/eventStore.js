@@ -11,6 +11,9 @@ try {
 }
 
 const TIME_ZONE = "America/New_York";
+const MAX_UPCOMING_PER_MONTH = 20;
+const MAX_UPCOMING_PER_SERIES_PER_MONTH = 3;
+const MIN_UPCOMING_SELECTION_SCORE = 10;
 
 function getTodayIso() {
   return new Intl.DateTimeFormat("en-CA", {
@@ -173,6 +176,135 @@ function comparePast(a, b) {
   return `${b.startDate}${b.startTime || "00:00"}`.localeCompare(`${a.startDate}${a.startTime || "00:00"}`);
 }
 
+function scoreUpcomingSelection(event) {
+  const haystack = [
+    event.title,
+    event.category,
+    event.organizer,
+    event.shortSummary,
+    ...(event.tags || [])
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  let score = 0;
+
+  if (!event.importSource) {
+    score += 100;
+  }
+
+  if (event.organizer && event.organizer.toLowerCase().includes("white plains council of neighborhood associations")) {
+    score += 50;
+  }
+
+  if (event.featured) {
+    score += 35;
+  }
+
+  if (event.importSource === "bid") {
+    score += 16;
+  } else if (event.importSource === "wppac") {
+    score += 14;
+  } else if (event.importSource === "city") {
+    score += 10;
+  } else if (event.importSource === "library") {
+    score += 8;
+  }
+
+  if (event.category === "Food & Downtown" || event.category === "Music & Family") {
+    score += 14;
+  } else if (event.category === "Family" || event.category === "Arts") {
+    score += 11;
+  } else if (event.category === "Workshop") {
+    score += 10;
+  } else if (event.category === "Community") {
+    score += 9;
+  } else if (event.category === "Learning") {
+    score += 8;
+  } else if (event.category === "Civic") {
+    score += 7;
+  }
+
+  if (/\b(festival|parade|market|concert|show|theater|theatre|wing walk|rock the block|holiday|pride|juneteenth|soccer fest|family|music|downtown|tickets|workshop|public hearing|youth leadership|earth day)\b/.test(haystack)) {
+    score += 14;
+  }
+
+  if (/\b(common council meeting|vision zero|housing|financial aid|energy|college|genealogy|narcan|history|white plains)\b/.test(haystack)) {
+    score += 9;
+  }
+
+  if (/\b(work session|board|commission|agency|corporation|review board|transportation commission|conservation board|planning board|zoning board|special meeting)\b/.test(haystack)) {
+    score -= 18;
+  }
+
+  return score;
+}
+
+function compareUpcomingSelection(a, b) {
+  const scoreDiff = scoreUpcomingSelection(b) - scoreUpcomingSelection(a);
+
+  if (scoreDiff !== 0) {
+    return scoreDiff;
+  }
+
+  return compareUpcoming(a, b);
+}
+
+function eventSeriesKey(event) {
+  const title = String(event.title || "").trim();
+
+  if (!title) {
+    return "";
+  }
+
+  const prefixed = title.split(/\s[-:]\s/)[0].trim();
+  const base = prefixed.length >= 8 ? prefixed : title;
+
+  return normalizeText(base);
+}
+
+function limitUpcomingByMonth(events) {
+  const monthMap = new Map();
+
+  for (const event of events) {
+    const list = monthMap.get(event.monthKey) || [];
+    list.push(event);
+    monthMap.set(event.monthKey, list);
+  }
+
+  return [...monthMap.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .flatMap(([, monthEvents]) => {
+      const selected = [];
+      const seriesCounts = new Map();
+
+      for (const event of monthEvents.sort(compareUpcomingSelection)) {
+        const seriesKey = eventSeriesKey(event);
+        const seriesCount = seriesCounts.get(seriesKey) || 0;
+        const eventScore = scoreUpcomingSelection(event);
+
+        if (selected.length >= MAX_UPCOMING_PER_MONTH) {
+          break;
+        }
+
+        if (eventScore < MIN_UPCOMING_SELECTION_SCORE) {
+          continue;
+        }
+
+        if (seriesKey && seriesCount >= MAX_UPCOMING_PER_SERIES_PER_MONTH) {
+          continue;
+        }
+
+        selected.push(event);
+        if (seriesKey) {
+          seriesCounts.set(seriesKey, seriesCount + 1);
+        }
+      }
+
+      return selected.sort(compareUpcoming);
+    });
+}
+
 function buildRelatedPreview(event) {
   return {
     id: event.id,
@@ -224,13 +356,16 @@ const all = mergedEvents.map((event) => {
   };
 });
 
-const upcoming = all.filter((event) => event.status === "upcoming").sort(compareUpcoming);
+const rawUpcoming = all.filter((event) => event.status === "upcoming").sort(compareUpcoming);
+const upcoming = limitUpcomingByMonth(rawUpcoming);
+const upcomingSlugSet = new Set(upcoming.map((event) => event.slug));
 const past = all.filter((event) => event.status === "past").sort(comparePast);
+const visibleAll = all.filter((event) => event.status === "past" || upcomingSlugSet.has(event.slug));
 
-const bySlug = new Map(all.map((event) => [event.slug, event]));
+const bySlug = new Map(visibleAll.map((event) => [event.slug, event]));
 
-for (const event of all) {
-  event.relatedEvents = all
+for (const event of visibleAll) {
+  event.relatedEvents = visibleAll
     .filter((candidate) => candidate.slug !== event.slug)
     .map((candidate) => ({
       candidate,
@@ -248,8 +383,8 @@ for (const event of all) {
     .map((entry) => buildRelatedPreview(entry.candidate));
 }
 
-const categories = [...new Set(all.map((event) => event.category))].sort();
-const months = [...new Set(all.map((event) => event.monthKey))].sort();
+const categories = [...new Set(visibleAll.map((event) => event.category))].sort();
+const months = [...new Set(visibleAll.map((event) => event.monthKey))].sort();
 
 const featuredUpcoming = upcoming.filter((event) => event.featured);
 const featuredPast = past.filter((event) => event.featured);
@@ -257,7 +392,7 @@ const homeUpcoming = (featuredUpcoming.length ? featuredUpcoming : upcoming).sli
 const homePast = (featuredPast.length ? featuredPast : past).slice(0, 4);
 
 module.exports = {
-  all,
+  all: visibleAll,
   bySlug,
   upcoming,
   past,

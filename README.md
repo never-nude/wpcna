@@ -71,6 +71,10 @@ Current automated sources:
 - White Plains BID
 - White Plains Performing Arts Center
 
+The library feed is intentionally curated rather than mirrored in full. The importer keeps broader public-interest library programs and filters out most routine recurring classes and in-library weekly programming so the WPCNA site does not become a copy of the full library calendar.
+
+On top of that, the site only surfaces a selective upcoming slate each month across all sources combined. Upcoming events are ranked and capped so the public calendar stays readable instead of turning into a full mirror of every partner calendar.
+
 The workflow lives at [`/.github/workflows/update-events.yml`](./.github/workflows/update-events.yml), and the importer lives at [`/scripts/update-events.mjs`](./scripts/update-events.mjs).
 
 ### Run the refresh manually
