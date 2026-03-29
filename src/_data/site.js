@@ -29,10 +29,6 @@ module.exports = {
     "WPCNA usually meets on the second Tuesday of the month at 7:00 p.m. Agendas and timing can change, so it is worth checking before you go.",
   communityChannels: [
     {
-      label: "White Plains BID Instagram",
-      url: "https://www.instagram.com/whiteplains.bid/"
-    },
-    {
       label: "White Plains Public Library calendar",
       url: "https://calendar.whiteplainslibrary.org/"
     },
