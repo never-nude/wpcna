@@ -1761,6 +1761,36 @@
     "importSource": "city"
   },
   {
+    "id": "library-graphic-novel-chat-and-bingo-noodle-and-bao-by-shaina-lu-2026-05-19",
+    "slug": "library-graphic-novel-chat-and-bingo-noodle-and-bao-by-shaina-lu-2026-05-19",
+    "title": "Graphic Novel Chat & BINGO: Noodle & Bao by Shaina Lu",
+    "category": "Learning",
+    "shortSummary": "Join us for some fun by talking about Noodle &amp; Bao by Shaina Lu!",
+    "fullDescription": "Join us for some fun by talking about Noodle &amp; Bao by Shaina Lu! The first 4 students to register will receive a free copy of the graphic novel. Upon registration, please come to the Trove reference desk to pick up your free copy of the graphic novel. Other participants can have a copy placed on hold for them. For best discussion results, please make sure to read the graphic novel before coming to the program. We will also be playing a BINGO game based on Noodle &amp; Bao and snacking on treats. About the Book Noodle &amp; Bao: Momo has lived in Town 99 her entire life. She knows all its quirks and rhythms: the best places to buy fruit, practice tai-chi in the park, and, most of all, get the best meal: Noodle &amp; Bao, run by Momo's best friend, Bao, and their amah, Noodle. But Town 99 is changing. Rent is becoming unaffordable for Momo and her parents, and even Noodle &amp; Bao has been edged out of its storefront, which was just recently bought out by a new business venture--Fanc&eacute; Cafe. Fanc&eacute; is run by the ambitious Ms. Jujube and her henchmen, who claim they're only beautifying Town 99 with good business. Momo knows that's not true, and knows that if she doesn't do something, she'll lose everything she loves about her neighborhood. Check the library page for registration, tickets, and any schedule updates.",
+    "startDate": "2026-05-19",
+    "endDate": "2026-05-19",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "locationName": "White Plains Public Library, Galaxy Hall",
+    "locationAddress": "100 Martine Avenue, White Plains, NY 10601",
+    "image": "/assets/img/events/learning.svg",
+    "flyerPdf": null,
+    "externalUrl": "https://calendar.whiteplainslibrary.org/event/16130176",
+    "ctaLabel": "Open library page",
+    "featured": false,
+    "status": "upcoming",
+    "tags": [
+      "books and authors",
+      "grades 4 - 6",
+      "children",
+      "library"
+    ],
+    "organizer": "White Plains Public Library",
+    "sourceUrl": "https://calendar.whiteplainslibrary.org/event/16130176",
+    "sourceLabel": "Library calendar",
+    "importSource": "library"
+  },
+  {
     "id": "bid-downtown-white-plains-rock-the-block-2026-2026-05-20",
     "slug": "bid-downtown-white-plains-rock-the-block-2026-2026-05-20",
     "title": "Downtown White Plains Rock the Block 2026",
@@ -2892,9 +2922,9 @@
     "importSource": "city"
   },
   {
-    "id": "wppac-tba-march-2026-2026-08-10",
-    "slug": "wppac-tba-march-2026-2026-08-10",
-    "title": "TBA! March 2026",
+    "id": "wppac-tba-may-2026-2026-08-10",
+    "slug": "wppac-tba-may-2026-2026-08-10",
+    "title": "TBA! May 2026",
     "category": "Arts",
     "shortSummary": "We plan to announce this title in May pending the release of the rights to a brand new Broadway JR title based on a Dreamworks Animated Film Franchise!",
     "fullDescription": "We plan to announce this title in May pending the release of the rights to a brand new Broadway JR title based on a Dreamworks Animated Film Franchise! Check back for the announcement! $1000 (Early Bird) $1100 (Regular) Use the show page for tickets and the full performance schedule.",
@@ -2906,7 +2936,7 @@
     "locationAddress": "11 City Place, 3rd Floor, White Plains, NY 10601",
     "image": "/assets/img/events/arts.svg",
     "flyerPdf": null,
-    "externalUrl": "https://wppac.com/shows/tba-march-2026/",
+    "externalUrl": "https://wppac.com/shows/tba-may-2026/",
     "ctaLabel": "Open show page",
     "featured": false,
     "status": "upcoming",
@@ -2915,7 +2945,7 @@
       "theater"
     ],
     "organizer": "White Plains Performing Arts Center",
-    "sourceUrl": "https://wppac.com/shows/tba-march-2026/",
+    "sourceUrl": "https://wppac.com/shows/tba-may-2026/",
     "sourceLabel": "WPPAC",
     "importSource": "wppac"
   },
