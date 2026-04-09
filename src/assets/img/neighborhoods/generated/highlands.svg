@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Highlands neighborhood, West Side and Near-Downtown Neighborhoods, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2c1e"/>
+      <stop offset="0.6" stop-color="#166534"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <circle cx="782" cy="438" r="265" fill="url(#g2)" opacity="0.55"/>
+        <circle cx="818" cy="462" r="224" fill="#fde68a" opacity="0.35"/>
+  <rect x="0" y="747" width="56" height="153" fill="#000" opacity="0.35"/><rect x="60" y="629" width="92" height="271" fill="#000" opacity="0.35"/><rect x="156" y="651" width="36" height="249" fill="#000" opacity="0.35"/><rect x="196" y="709" width="50" height="191" fill="#000" opacity="0.35"/><rect x="250" y="671" width="76" height="229" fill="#000" opacity="0.35"/><rect x="330" y="657" width="28" height="243" fill="#000" opacity="0.35"/><rect x="362" y="719" width="76" height="181" fill="#000" opacity="0.35"/><rect x="442" y="749" width="72" height="151" fill="#000" opacity="0.35"/><rect x="518" y="747" width="92" height="153" fill="#000" opacity="0.35"/><rect x="614" y="645" width="80" height="255" fill="#000" opacity="0.35"/><rect x="698" y="691" width="86" height="209" fill="#000" opacity="0.35"/><rect x="788" y="657" width="70" height="243" fill="#000" opacity="0.35"/><rect x="862" y="739" width="28" height="161" fill="#000" opacity="0.35"/><rect x="894" y="733" width="60" height="167" fill="#000" opacity="0.35"/><rect x="958" y="707" width="28" height="193" fill="#000" opacity="0.35"/><rect x="990" y="689" width="84" height="211" fill="#000" opacity="0.35"/><rect x="1078" y="627" width="88" height="273" fill="#000" opacity="0.35"/><rect x="1170" y="737" width="26" height="163" fill="#000" opacity="0.35"/><rect x="1200" y="711" width="80" height="189" fill="#000" opacity="0.35"/><rect x="1284" y="741" width="26" height="159" fill="#000" opacity="0.35"/><rect x="1314" y="715" width="60" height="185" fill="#000" opacity="0.35"/><rect x="1378" y="721" width="26" height="179" fill="#000" opacity="0.35"/><rect x="1408" y="731" width="68" height="169" fill="#000" opacity="0.35"/><rect x="1480" y="689" width="88" height="211" fill="#000" opacity="0.35"/><rect x="1572" y="667" width="50" height="233" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">West Side and Near-Downtown Neighborhoods</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Highlands</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

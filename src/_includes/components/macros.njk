@@ -28,7 +28,9 @@
       <p class="event-card-summary">{{ event.shortSummary }}</p>
       <div class="event-card-actions">
         {% if event.primaryAction %}
-          <a class="btn btn-primary" href="{{ event.primaryAction.url }}" target="_blank" rel="noopener">{{ event.primaryAction.label }}</a>
+          {% set actionUrl = event.primaryAction.url %}
+          {% set isExternalAction = actionUrl.startsWith("http") %}
+          <a class="btn btn-primary" href="{{ actionUrl if isExternalAction else (actionUrl | withPrefix) }}"{% if isExternalAction %} target="_blank" rel="noopener"{% endif %}>{{ event.primaryAction.label }}</a>
         {% endif %}
         <a class="link-arrow" href="{{ event.detailUrl | withPrefix }}">Details</a>
       </div>
@@ -37,21 +39,30 @@
 {% endmacro %}
 
 {% macro resourceCard(resource) %}
+  {% set isExternal = resource.url.startsWith("http") %}
+  {% set href = resource.url if isExternal else (resource.url | withPrefix) %}
   <article class="resource-card">
     <p class="eyebrow">{{ resource.eyebrow }}</p>
     <h3>{{ resource.title }}</h3>
     <p>{{ resource.summary }}</p>
-    <a class="link-arrow" href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.ctaLabel }}</a>
+    <a class="link-arrow" href="{{ href }}"{% if isExternal %} target="_blank" rel="noopener"{% endif %}>{{ resource.ctaLabel }}</a>
   </article>
 {% endmacro %}
 
 {% macro neighborhoodCard(neighborhood, compact=true) %}
   <article class="neighborhood-card">
     <a href="{{ neighborhood.detailUrl | withPrefix }}">
-      <p class="neighborhood-card-group">{{ neighborhood.group }}</p>
-      <h3>{{ neighborhood.name }}</h3>
-      <p class="neighborhood-card-teaser">{{ neighborhood.teaser }}</p>
-      <span class="neighborhood-card-cta">View neighborhood</span>
+      {% if neighborhood.hero %}
+        <span class="neighborhood-card-img">
+          <img src="{{ neighborhood.hero.imagePath | withPrefix }}" alt="{{ neighborhood.hero.altText }}" loading="lazy">
+        </span>
+      {% endif %}
+      <span class="neighborhood-card-body">
+        <p class="neighborhood-card-group">{{ neighborhood.group }}</p>
+        <h3>{{ neighborhood.name }}</h3>
+        <p class="neighborhood-card-teaser">{{ neighborhood.teaser }}</p>
+        <span class="neighborhood-card-cta">View neighborhood</span>
+      </span>
     </a>
   </article>
 {% endmacro %}

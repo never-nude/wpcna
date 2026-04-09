@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Hillair Circle neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="0,900 465,610 1600,900" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="465" cy="510" r="123" fill="#fcd34d" opacity="0.35"/>
+  <rect x="0" y="716" width="55" height="184" fill="#000" opacity="0.35"/><rect x="59" y="618" width="37" height="282" fill="#000" opacity="0.35"/><rect x="100" y="712" width="61" height="188" fill="#000" opacity="0.35"/><rect x="165" y="746" width="39" height="154" fill="#000" opacity="0.35"/><rect x="208" y="716" width="53" height="184" fill="#000" opacity="0.35"/><rect x="265" y="726" width="29" height="174" fill="#000" opacity="0.35"/><rect x="298" y="724" width="73" height="176" fill="#000" opacity="0.35"/><rect x="375" y="746" width="55" height="154" fill="#000" opacity="0.35"/><rect x="434" y="632" width="73" height="268" fill="#000" opacity="0.35"/><rect x="511" y="750" width="37" height="150" fill="#000" opacity="0.35"/><rect x="552" y="724" width="67" height="176" fill="#000" opacity="0.35"/><rect x="623" y="738" width="61" height="162" fill="#000" opacity="0.35"/><rect x="688" y="648" width="91" height="252" fill="#000" opacity="0.35"/><rect x="783" y="666" width="29" height="234" fill="#000" opacity="0.35"/><rect x="816" y="644" width="93" height="256" fill="#000" opacity="0.35"/><rect x="913" y="750" width="37" height="150" fill="#000" opacity="0.35"/><rect x="954" y="644" width="63" height="256" fill="#000" opacity="0.35"/><rect x="1021" y="674" width="45" height="226" fill="#000" opacity="0.35"/><rect x="1070" y="628" width="27" height="272" fill="#000" opacity="0.35"/><rect x="1101" y="750" width="73" height="150" fill="#000" opacity="0.35"/><rect x="1178" y="688" width="73" height="212" fill="#000" opacity="0.35"/><rect x="1255" y="702" width="81" height="198" fill="#000" opacity="0.35"/><rect x="1340" y="692" width="35" height="208" fill="#000" opacity="0.35"/><rect x="1379" y="710" width="69" height="190" fill="#000" opacity="0.35"/><rect x="1452" y="616" width="33" height="284" fill="#000" opacity="0.35"/><rect x="1489" y="622" width="89" height="278" fill="#000" opacity="0.35"/><rect x="1582" y="680" width="85" height="220" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Hillair Circle</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

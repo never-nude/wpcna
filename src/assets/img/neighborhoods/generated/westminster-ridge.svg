@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Westminster Ridge neighborhood, North and Northeast, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1a3e"/>
+      <stop offset="0.6" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="-54,371 666,371 866,1091 -254,1091" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="1294" cy="731" r="180" fill="#f0abfc" opacity="0.4"/>
+  <rect x="0" y="671" width="40" height="229" fill="#000" opacity="0.35"/><rect x="44" y="633" width="30" height="267" fill="#000" opacity="0.35"/><rect x="78" y="667" width="42" height="233" fill="#000" opacity="0.35"/><rect x="124" y="621" width="52" height="279" fill="#000" opacity="0.35"/><rect x="180" y="747" width="54" height="153" fill="#000" opacity="0.35"/><rect x="238" y="665" width="70" height="235" fill="#000" opacity="0.35"/><rect x="312" y="691" width="46" height="209" fill="#000" opacity="0.35"/><rect x="362" y="665" width="72" height="235" fill="#000" opacity="0.35"/><rect x="438" y="651" width="60" height="249" fill="#000" opacity="0.35"/><rect x="502" y="745" width="40" height="155" fill="#000" opacity="0.35"/><rect x="546" y="699" width="74" height="201" fill="#000" opacity="0.35"/><rect x="624" y="693" width="78" height="207" fill="#000" opacity="0.35"/><rect x="706" y="663" width="66" height="237" fill="#000" opacity="0.35"/><rect x="776" y="645" width="66" height="255" fill="#000" opacity="0.35"/><rect x="846" y="675" width="56" height="225" fill="#000" opacity="0.35"/><rect x="906" y="737" width="48" height="163" fill="#000" opacity="0.35"/><rect x="958" y="627" width="90" height="273" fill="#000" opacity="0.35"/><rect x="1052" y="641" width="40" height="259" fill="#000" opacity="0.35"/><rect x="1096" y="743" width="54" height="157" fill="#000" opacity="0.35"/><rect x="1154" y="681" width="60" height="219" fill="#000" opacity="0.35"/><rect x="1218" y="663" width="26" height="237" fill="#000" opacity="0.35"/><rect x="1248" y="701" width="72" height="199" fill="#000" opacity="0.35"/><rect x="1324" y="743" width="64" height="157" fill="#000" opacity="0.35"/><rect x="1392" y="613" width="76" height="287" fill="#000" opacity="0.35"/><rect x="1472" y="675" width="46" height="225" fill="#000" opacity="0.35"/><rect x="1522" y="689" width="82" height="211" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">North and Northeast</text>
+    <text x="80" y="380" font-size="92" font-weight="700" letter-spacing="-1">Westminster Ridge</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#f0abfc" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

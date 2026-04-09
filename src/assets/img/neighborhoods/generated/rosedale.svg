@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Rosedale neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <g transform="rotate(286 800 450)">
+          <rect x="-200" y="530" width="2000" height="160" fill="url(#g2)" opacity="0.5"/>
+        </g>
+        <circle cx="383" cy="530" r="255" fill="#fcd34d" opacity="0.35"/>
+  <rect x="0" y="688" width="67" height="212" fill="#000" opacity="0.35"/><rect x="71" y="726" width="85" height="174" fill="#000" opacity="0.35"/><rect x="160" y="720" width="67" height="180" fill="#000" opacity="0.35"/><rect x="231" y="698" width="77" height="202" fill="#000" opacity="0.35"/><rect x="312" y="672" width="77" height="228" fill="#000" opacity="0.35"/><rect x="393" y="674" width="67" height="226" fill="#000" opacity="0.35"/><rect x="464" y="720" width="53" height="180" fill="#000" opacity="0.35"/><rect x="521" y="642" width="91" height="258" fill="#000" opacity="0.35"/><rect x="616" y="656" width="49" height="244" fill="#000" opacity="0.35"/><rect x="669" y="642" width="77" height="258" fill="#000" opacity="0.35"/><rect x="750" y="688" width="41" height="212" fill="#000" opacity="0.35"/><rect x="795" y="618" width="27" height="282" fill="#000" opacity="0.35"/><rect x="826" y="664" width="65" height="236" fill="#000" opacity="0.35"/><rect x="895" y="670" width="85" height="230" fill="#000" opacity="0.35"/><rect x="984" y="732" width="39" height="168" fill="#000" opacity="0.35"/><rect x="1027" y="682" width="87" height="218" fill="#000" opacity="0.35"/><rect x="1118" y="664" width="91" height="236" fill="#000" opacity="0.35"/><rect x="1213" y="690" width="31" height="210" fill="#000" opacity="0.35"/><rect x="1248" y="676" width="95" height="224" fill="#000" opacity="0.35"/><rect x="1347" y="686" width="37" height="214" fill="#000" opacity="0.35"/><rect x="1388" y="684" width="51" height="216" fill="#000" opacity="0.35"/><rect x="1443" y="746" width="43" height="154" fill="#000" opacity="0.35"/><rect x="1490" y="704" width="67" height="196" fill="#000" opacity="0.35"/><rect x="1561" y="714" width="39" height="186" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Rosedale</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

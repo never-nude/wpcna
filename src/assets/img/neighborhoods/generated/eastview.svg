@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Eastview neighborhood, North and Northeast, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1a3e"/>
+      <stop offset="0.6" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <rect x="0" y="350" width="1600" height="550" fill="url(#g2)" opacity="0.45"/>
+        <circle cx="1059" cy="350" r="220" fill="#f0abfc" opacity="0.4"/>
+  <rect x="0" y="618" width="31" height="282" fill="#000" opacity="0.35"/><rect x="35" y="676" width="43" height="224" fill="#000" opacity="0.35"/><rect x="82" y="626" width="51" height="274" fill="#000" opacity="0.35"/><rect x="137" y="740" width="81" height="160" fill="#000" opacity="0.35"/><rect x="222" y="734" width="91" height="166" fill="#000" opacity="0.35"/><rect x="317" y="724" width="95" height="176" fill="#000" opacity="0.35"/><rect x="416" y="718" width="37" height="182" fill="#000" opacity="0.35"/><rect x="457" y="684" width="73" height="216" fill="#000" opacity="0.35"/><rect x="534" y="750" width="49" height="150" fill="#000" opacity="0.35"/><rect x="587" y="652" width="77" height="248" fill="#000" opacity="0.35"/><rect x="668" y="622" width="71" height="278" fill="#000" opacity="0.35"/><rect x="743" y="740" width="87" height="160" fill="#000" opacity="0.35"/><rect x="834" y="662" width="83" height="238" fill="#000" opacity="0.35"/><rect x="921" y="704" width="91" height="196" fill="#000" opacity="0.35"/><rect x="1016" y="646" width="83" height="254" fill="#000" opacity="0.35"/><rect x="1103" y="668" width="55" height="232" fill="#000" opacity="0.35"/><rect x="1162" y="682" width="29" height="218" fill="#000" opacity="0.35"/><rect x="1195" y="724" width="65" height="176" fill="#000" opacity="0.35"/><rect x="1264" y="614" width="35" height="286" fill="#000" opacity="0.35"/><rect x="1303" y="664" width="63" height="236" fill="#000" opacity="0.35"/><rect x="1370" y="650" width="43" height="250" fill="#000" opacity="0.35"/><rect x="1417" y="668" width="45" height="232" fill="#000" opacity="0.35"/><rect x="1466" y="618" width="67" height="282" fill="#000" opacity="0.35"/><rect x="1537" y="716" width="37" height="184" fill="#000" opacity="0.35"/><rect x="1578" y="718" width="55" height="182" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">North and Northeast</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Eastview</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#f0abfc" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

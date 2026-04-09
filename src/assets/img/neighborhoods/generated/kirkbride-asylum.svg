@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Kirkbride Asylum neighborhood, East Side and Institutional Anchors, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b1d10"/>
+      <stop offset="0.6" stop-color="#9a3412"/>
+      <stop offset="1" stop-color="#dc6b20"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="279,23 561,23 761,305 79,305" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="1180" cy="164" r="70" fill="#fde68a" opacity="0.4"/>
+  <rect x="0" y="612" width="95" height="288" fill="#000" opacity="0.35"/><rect x="99" y="642" width="55" height="258" fill="#000" opacity="0.35"/><rect x="158" y="736" width="63" height="164" fill="#000" opacity="0.35"/><rect x="225" y="634" width="79" height="266" fill="#000" opacity="0.35"/><rect x="308" y="748" width="93" height="152" fill="#000" opacity="0.35"/><rect x="405" y="726" width="93" height="174" fill="#000" opacity="0.35"/><rect x="502" y="684" width="33" height="216" fill="#000" opacity="0.35"/><rect x="539" y="674" width="65" height="226" fill="#000" opacity="0.35"/><rect x="608" y="648" width="85" height="252" fill="#000" opacity="0.35"/><rect x="697" y="694" width="63" height="206" fill="#000" opacity="0.35"/><rect x="764" y="664" width="39" height="236" fill="#000" opacity="0.35"/><rect x="807" y="686" width="37" height="214" fill="#000" opacity="0.35"/><rect x="848" y="652" width="41" height="248" fill="#000" opacity="0.35"/><rect x="893" y="710" width="31" height="190" fill="#000" opacity="0.35"/><rect x="928" y="656" width="49" height="244" fill="#000" opacity="0.35"/><rect x="981" y="730" width="73" height="170" fill="#000" opacity="0.35"/><rect x="1058" y="720" width="93" height="180" fill="#000" opacity="0.35"/><rect x="1155" y="742" width="63" height="158" fill="#000" opacity="0.35"/><rect x="1222" y="692" width="95" height="208" fill="#000" opacity="0.35"/><rect x="1321" y="726" width="91" height="174" fill="#000" opacity="0.35"/><rect x="1416" y="632" width="57" height="268" fill="#000" opacity="0.35"/><rect x="1477" y="730" width="45" height="170" fill="#000" opacity="0.35"/><rect x="1526" y="728" width="59" height="172" fill="#000" opacity="0.35"/><rect x="1589" y="670" width="93" height="230" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">East Side and Institutional Anchors</text>
+    <text x="80" y="380" font-size="92" font-weight="700" letter-spacing="-1">Kirkbride Asylum</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

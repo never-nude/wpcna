@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Gedney Park neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="67,286 611,286 811,830 -133,830" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="1261" cy="558" r="136" fill="#fcd34d" opacity="0.4"/>
+  <rect x="0" y="654" width="69" height="246" fill="#000" opacity="0.35"/><rect x="73" y="724" width="75" height="176" fill="#000" opacity="0.35"/><rect x="152" y="690" width="81" height="210" fill="#000" opacity="0.35"/><rect x="237" y="624" width="35" height="276" fill="#000" opacity="0.35"/><rect x="276" y="750" width="33" height="150" fill="#000" opacity="0.35"/><rect x="313" y="616" width="67" height="284" fill="#000" opacity="0.35"/><rect x="384" y="734" width="59" height="166" fill="#000" opacity="0.35"/><rect x="447" y="660" width="39" height="240" fill="#000" opacity="0.35"/><rect x="490" y="658" width="87" height="242" fill="#000" opacity="0.35"/><rect x="581" y="672" width="93" height="228" fill="#000" opacity="0.35"/><rect x="678" y="670" width="91" height="230" fill="#000" opacity="0.35"/><rect x="773" y="664" width="89" height="236" fill="#000" opacity="0.35"/><rect x="866" y="634" width="41" height="266" fill="#000" opacity="0.35"/><rect x="911" y="660" width="93" height="240" fill="#000" opacity="0.35"/><rect x="1008" y="722" width="57" height="178" fill="#000" opacity="0.35"/><rect x="1069" y="612" width="49" height="288" fill="#000" opacity="0.35"/><rect x="1122" y="662" width="33" height="238" fill="#000" opacity="0.35"/><rect x="1159" y="640" width="39" height="260" fill="#000" opacity="0.35"/><rect x="1202" y="710" width="75" height="190" fill="#000" opacity="0.35"/><rect x="1281" y="716" width="57" height="184" fill="#000" opacity="0.35"/><rect x="1342" y="710" width="77" height="190" fill="#000" opacity="0.35"/><rect x="1423" y="744" width="69" height="156" fill="#000" opacity="0.35"/><rect x="1496" y="710" width="83" height="190" fill="#000" opacity="0.35"/><rect x="1583" y="644" width="79" height="256" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Gedney Park</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

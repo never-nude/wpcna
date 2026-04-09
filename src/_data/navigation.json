@@ -12,6 +12,10 @@
     "url": "/neighborhoods/"
   },
   {
+    "label": "Agendas",
+    "url": "/agendas/"
+  },
+  {
     "label": "About",
     "url": "/about/"
   }

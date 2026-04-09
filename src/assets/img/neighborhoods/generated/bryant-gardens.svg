@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Bryant Gardens neighborhood, East Side and Institutional Anchors, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b1d10"/>
+      <stop offset="0.6" stop-color="#9a3412"/>
+      <stop offset="1" stop-color="#dc6b20"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <g transform="rotate(160 800 450)">
+          <rect x="-200" y="443" width="2000" height="160" fill="url(#g2)" opacity="0.5"/>
+        </g>
+        <circle cx="901" cy="443" r="328" fill="#fde68a" opacity="0.35"/>
+  <rect x="0" y="634" width="71" height="266" fill="#000" opacity="0.35"/><rect x="75" y="632" width="63" height="268" fill="#000" opacity="0.35"/><rect x="142" y="698" width="91" height="202" fill="#000" opacity="0.35"/><rect x="237" y="648" width="71" height="252" fill="#000" opacity="0.35"/><rect x="312" y="694" width="57" height="206" fill="#000" opacity="0.35"/><rect x="373" y="736" width="87" height="164" fill="#000" opacity="0.35"/><rect x="464" y="726" width="39" height="174" fill="#000" opacity="0.35"/><rect x="507" y="744" width="67" height="156" fill="#000" opacity="0.35"/><rect x="578" y="690" width="33" height="210" fill="#000" opacity="0.35"/><rect x="615" y="728" width="43" height="172" fill="#000" opacity="0.35"/><rect x="662" y="742" width="89" height="158" fill="#000" opacity="0.35"/><rect x="755" y="748" width="77" height="152" fill="#000" opacity="0.35"/><rect x="836" y="686" width="83" height="214" fill="#000" opacity="0.35"/><rect x="923" y="616" width="95" height="284" fill="#000" opacity="0.35"/><rect x="1022" y="698" width="33" height="202" fill="#000" opacity="0.35"/><rect x="1059" y="744" width="45" height="156" fill="#000" opacity="0.35"/><rect x="1108" y="738" width="51" height="162" fill="#000" opacity="0.35"/><rect x="1163" y="720" width="41" height="180" fill="#000" opacity="0.35"/><rect x="1208" y="726" width="65" height="174" fill="#000" opacity="0.35"/><rect x="1277" y="720" width="55" height="180" fill="#000" opacity="0.35"/><rect x="1336" y="734" width="35" height="166" fill="#000" opacity="0.35"/><rect x="1375" y="728" width="77" height="172" fill="#000" opacity="0.35"/><rect x="1456" y="714" width="75" height="186" fill="#000" opacity="0.35"/><rect x="1535" y="684" width="69" height="216" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">East Side and Institutional Anchors</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Bryant Gardens</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Fisher Hill neighborhood, West Side and Near-Downtown Neighborhoods, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2c1e"/>
+      <stop offset="0.6" stop-color="#166534"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="889,313 1357,313 1557,781 689,781" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="477" cy="547" r="117" fill="#fde68a" opacity="0.4"/>
+  <rect x="0" y="632" width="59" height="268" fill="#000" opacity="0.35"/><rect x="63" y="726" width="47" height="174" fill="#000" opacity="0.35"/><rect x="114" y="688" width="95" height="212" fill="#000" opacity="0.35"/><rect x="213" y="722" width="53" height="178" fill="#000" opacity="0.35"/><rect x="270" y="644" width="37" height="256" fill="#000" opacity="0.35"/><rect x="311" y="682" width="51" height="218" fill="#000" opacity="0.35"/><rect x="366" y="676" width="77" height="224" fill="#000" opacity="0.35"/><rect x="447" y="630" width="59" height="270" fill="#000" opacity="0.35"/><rect x="510" y="652" width="85" height="248" fill="#000" opacity="0.35"/><rect x="599" y="642" width="61" height="258" fill="#000" opacity="0.35"/><rect x="664" y="656" width="83" height="244" fill="#000" opacity="0.35"/><rect x="751" y="662" width="57" height="238" fill="#000" opacity="0.35"/><rect x="812" y="620" width="67" height="280" fill="#000" opacity="0.35"/><rect x="883" y="746" width="57" height="154" fill="#000" opacity="0.35"/><rect x="944" y="724" width="29" height="176" fill="#000" opacity="0.35"/><rect x="977" y="750" width="71" height="150" fill="#000" opacity="0.35"/><rect x="1052" y="612" width="39" height="288" fill="#000" opacity="0.35"/><rect x="1095" y="718" width="37" height="182" fill="#000" opacity="0.35"/><rect x="1136" y="700" width="53" height="200" fill="#000" opacity="0.35"/><rect x="1193" y="710" width="81" height="190" fill="#000" opacity="0.35"/><rect x="1278" y="652" width="31" height="248" fill="#000" opacity="0.35"/><rect x="1313" y="666" width="45" height="234" fill="#000" opacity="0.35"/><rect x="1362" y="744" width="79" height="156" fill="#000" opacity="0.35"/><rect x="1445" y="738" width="57" height="162" fill="#000" opacity="0.35"/><rect x="1506" y="656" width="69" height="244" fill="#000" opacity="0.35"/><rect x="1579" y="634" width="33" height="266" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">West Side and Near-Downtown Neighborhoods</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Fisher Hill</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

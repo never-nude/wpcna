@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Brook Hills neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <polygon points="653,403 929,403 1129,679 453,679" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="809" cy="541" r="69" fill="#fcd34d" opacity="0.4"/>
+  <rect x="0" y="715" width="66" height="185" fill="#000" opacity="0.35"/><rect x="70" y="729" width="54" height="171" fill="#000" opacity="0.35"/><rect x="128" y="719" width="62" height="181" fill="#000" opacity="0.35"/><rect x="194" y="721" width="30" height="179" fill="#000" opacity="0.35"/><rect x="228" y="687" width="78" height="213" fill="#000" opacity="0.35"/><rect x="310" y="681" width="56" height="219" fill="#000" opacity="0.35"/><rect x="370" y="707" width="90" height="193" fill="#000" opacity="0.35"/><rect x="464" y="617" width="32" height="283" fill="#000" opacity="0.35"/><rect x="500" y="623" width="76" height="277" fill="#000" opacity="0.35"/><rect x="580" y="709" width="80" height="191" fill="#000" opacity="0.35"/><rect x="664" y="679" width="60" height="221" fill="#000" opacity="0.35"/><rect x="728" y="717" width="44" height="183" fill="#000" opacity="0.35"/><rect x="776" y="703" width="60" height="197" fill="#000" opacity="0.35"/><rect x="840" y="637" width="66" height="263" fill="#000" opacity="0.35"/><rect x="910" y="711" width="68" height="189" fill="#000" opacity="0.35"/><rect x="982" y="697" width="38" height="203" fill="#000" opacity="0.35"/><rect x="1024" y="747" width="82" height="153" fill="#000" opacity="0.35"/><rect x="1110" y="613" width="28" height="287" fill="#000" opacity="0.35"/><rect x="1142" y="699" width="32" height="201" fill="#000" opacity="0.35"/><rect x="1178" y="741" width="76" height="159" fill="#000" opacity="0.35"/><rect x="1258" y="619" width="40" height="281" fill="#000" opacity="0.35"/><rect x="1302" y="677" width="62" height="223" fill="#000" opacity="0.35"/><rect x="1368" y="687" width="82" height="213" fill="#000" opacity="0.35"/><rect x="1454" y="721" width="90" height="179" fill="#000" opacity="0.35"/><rect x="1548" y="683" width="56" height="217" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Brook Hills</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

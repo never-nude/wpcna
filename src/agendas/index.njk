@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: Meeting Agendas & Minutes
+metaDescription: WPCNA monthly meeting agendas, minutes, and recordings.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">WPCNA</p>
+    <h1>Meeting agendas &amp; minutes</h1>
+    <p>{{ agendas.intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Recent</p>
+        <h2>Latest meetings</h2>
+        <p>Minutes from the most recent WPCNA meetings.</p>
+      </div>
+    </div>
+    <div class="card-grid card-grid-2">
+      {% for item in agendas.current %}
+        <article class="resource-card">
+          <p class="eyebrow">{{ item.label }}</p>
+          <h3>{{ item.title }}</h3>
+          {% if item.note %}<p>{{ item.note }}</p>{% endif %}
+          <div class="event-card-actions">
+            <a class="btn btn-primary" href="{{ item.pdf }}" target="_blank" rel="noopener">Download PDF</a>
+            {% if item.zoom %}
+              <a class="link-arrow" href="{{ item.zoom }}" target="_blank" rel="noopener">Zoom recording</a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Archive</p>
+        <h2>Past meeting minutes</h2>
+        <p>Older minutes and agendas, going back to early 2024.</p>
+      </div>
+    </div>
+    <div class="card-grid card-grid-2">
+      {% for item in agendas.archive %}
+        <article class="resource-card">
+          <p class="eyebrow">{{ item.label }}</p>
+          <h3>{{ item.title }}</h3>
+          {% if item.note %}<p>{{ item.note }}</p>{% endif %}
+          <div class="event-card-actions">
+            <a class="btn btn-primary" href="{{ item.pdf }}" target="_blank" rel="noopener">Download PDF</a>
+            {% if item.zoom %}
+              <a class="link-arrow" href="{{ item.zoom }}" target="_blank" rel="noopener">Recording</a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

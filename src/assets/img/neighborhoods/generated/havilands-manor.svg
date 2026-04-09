@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Havilands Manor neighborhood, East Side and Institutional Anchors, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b1d10"/>
+      <stop offset="0.6" stop-color="#9a3412"/>
+      <stop offset="1" stop-color="#dc6b20"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <g transform="rotate(194 800 450)">
+          <rect x="-200" y="601" width="2000" height="160" fill="url(#g2)" opacity="0.5"/>
+        </g>
+        <circle cx="576" cy="601" r="333" fill="#fde68a" opacity="0.35"/>
+  <rect x="0" y="687" width="38" height="213" fill="#000" opacity="0.35"/><rect x="42" y="705" width="84" height="195" fill="#000" opacity="0.35"/><rect x="130" y="663" width="68" height="237" fill="#000" opacity="0.35"/><rect x="202" y="713" width="88" height="187" fill="#000" opacity="0.35"/><rect x="294" y="611" width="50" height="289" fill="#000" opacity="0.35"/><rect x="348" y="697" width="64" height="203" fill="#000" opacity="0.35"/><rect x="416" y="695" width="42" height="205" fill="#000" opacity="0.35"/><rect x="462" y="729" width="86" height="171" fill="#000" opacity="0.35"/><rect x="552" y="727" width="70" height="173" fill="#000" opacity="0.35"/><rect x="626" y="701" width="50" height="199" fill="#000" opacity="0.35"/><rect x="680" y="747" width="74" height="153" fill="#000" opacity="0.35"/><rect x="758" y="693" width="46" height="207" fill="#000" opacity="0.35"/><rect x="808" y="699" width="66" height="201" fill="#000" opacity="0.35"/><rect x="878" y="629" width="54" height="271" fill="#000" opacity="0.35"/><rect x="936" y="675" width="32" height="225" fill="#000" opacity="0.35"/><rect x="972" y="689" width="44" height="211" fill="#000" opacity="0.35"/><rect x="1020" y="747" width="36" height="153" fill="#000" opacity="0.35"/><rect x="1060" y="661" width="46" height="239" fill="#000" opacity="0.35"/><rect x="1110" y="711" width="62" height="189" fill="#000" opacity="0.35"/><rect x="1176" y="649" width="84" height="251" fill="#000" opacity="0.35"/><rect x="1264" y="619" width="36" height="281" fill="#000" opacity="0.35"/><rect x="1304" y="649" width="68" height="251" fill="#000" opacity="0.35"/><rect x="1376" y="727" width="74" height="173" fill="#000" opacity="0.35"/><rect x="1454" y="705" width="46" height="195" fill="#000" opacity="0.35"/><rect x="1504" y="703" width="58" height="197" fill="#000" opacity="0.35"/><rect x="1566" y="657" width="74" height="243" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">East Side and Institutional Anchors</text>
+    <text x="80" y="380" font-size="92" font-weight="700" letter-spacing="-1">Havilands Manor</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

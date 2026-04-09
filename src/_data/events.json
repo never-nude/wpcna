@@ -242,7 +242,7 @@
     "locationAddress": "White Plains, NY",
     "image": "/assets/img/events/workshop.svg",
     "flyerPdf": "https://img1.wsimg.com/blobby/go/9af9db1d-be96-4dfe-bdfb-bcff6ea7f7c0/CNA%20Workshop%20Flyer%203-11-25-d9e1063.pdf",
-    "externalUrl": "https://wp-cna.org/wpcna-workshop-materials",
+    "externalUrl": "/workshops/",
     "ctaLabel": "Get the materials",
     "featured": false,
     "status": "past",
@@ -252,8 +252,8 @@
       "community organizing"
     ],
     "organizer": "White Plains Council of Neighborhood Associations",
-    "sourceUrl": "https://wp-cna.org/wpcna-workshop-materials",
-    "sourceLabel": "WPCNA workshop page"
+    "sourceUrl": "/workshops/",
+    "sourceLabel": "WPCNA workshop materials"
   },
   {
     "id": "final-vision-zero-public-meeting-2025",
@@ -280,7 +280,7 @@
       "road safety"
     ],
     "organizer": "City of White Plains",
-    "sourceUrl": "https://wp-cna.org/local-events",
+    "sourceUrl": "/agendas/",
     "sourceLabel": "WPCNA archive"
   },
   {
@@ -308,7 +308,7 @@
       "community"
     ],
     "organizer": "White Plains Beautification Foundation",
-    "sourceUrl": "https://wp-cna.org/local-events",
+    "sourceUrl": "/agendas/",
     "sourceLabel": "WPCNA archive"
   },
   {
@@ -451,7 +451,7 @@
       "safety"
     ],
     "organizer": "City of White Plains",
-    "sourceUrl": "https://wp-cna.org/local-events",
+    "sourceUrl": "/agendas/",
     "sourceLabel": "WPCNA archive"
   },
   {
@@ -479,7 +479,7 @@
       "planning"
     ],
     "organizer": "City of White Plains",
-    "sourceUrl": "https://wp-cna.org/local-events",
+    "sourceUrl": "/agendas/",
     "sourceLabel": "WPCNA archive"
   },
   {
@@ -507,7 +507,7 @@
       "public workshop"
     ],
     "organizer": "City of White Plains",
-    "sourceUrl": "https://wp-cna.org/local-events",
+    "sourceUrl": "/agendas/",
     "sourceLabel": "WPCNA archive"
   }
 ]

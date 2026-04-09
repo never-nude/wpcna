@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Reynal Park neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <g transform="rotate(351 800 450)">
+          <rect x="-200" y="562" width="2000" height="160" fill="url(#g2)" opacity="0.5"/>
+        </g>
+        <circle cx="1357" cy="562" r="315" fill="#fcd34d" opacity="0.35"/>
+  <rect x="0" y="742" width="91" height="158" fill="#000" opacity="0.35"/><rect x="95" y="652" width="83" height="248" fill="#000" opacity="0.35"/><rect x="182" y="750" width="83" height="150" fill="#000" opacity="0.35"/><rect x="269" y="612" width="29" height="288" fill="#000" opacity="0.35"/><rect x="302" y="614" width="93" height="286" fill="#000" opacity="0.35"/><rect x="399" y="740" width="29" height="160" fill="#000" opacity="0.35"/><rect x="432" y="674" width="65" height="226" fill="#000" opacity="0.35"/><rect x="501" y="668" width="73" height="232" fill="#000" opacity="0.35"/><rect x="578" y="726" width="91" height="174" fill="#000" opacity="0.35"/><rect x="673" y="672" width="41" height="228" fill="#000" opacity="0.35"/><rect x="718" y="726" width="45" height="174" fill="#000" opacity="0.35"/><rect x="767" y="628" width="89" height="272" fill="#000" opacity="0.35"/><rect x="860" y="678" width="73" height="222" fill="#000" opacity="0.35"/><rect x="937" y="644" width="39" height="256" fill="#000" opacity="0.35"/><rect x="980" y="662" width="31" height="238" fill="#000" opacity="0.35"/><rect x="1015" y="640" width="69" height="260" fill="#000" opacity="0.35"/><rect x="1088" y="682" width="67" height="218" fill="#000" opacity="0.35"/><rect x="1159" y="672" width="89" height="228" fill="#000" opacity="0.35"/><rect x="1252" y="722" width="35" height="178" fill="#000" opacity="0.35"/><rect x="1291" y="736" width="65" height="164" fill="#000" opacity="0.35"/><rect x="1360" y="710" width="51" height="190" fill="#000" opacity="0.35"/><rect x="1415" y="696" width="77" height="204" fill="#000" opacity="0.35"/><rect x="1496" y="682" width="49" height="218" fill="#000" opacity="0.35"/><rect x="1549" y="748" width="65" height="152" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Reynal Park</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

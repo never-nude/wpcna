@@ -1,0 +1,112 @@
+---
+layout: layouts/base.njk
+title: Neighborhood Map
+metaDescription: A map of the neighborhoods that make up White Plains, New York.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">White Plains</p>
+    <h1>Neighborhood map</h1>
+    <p>A simple map of the neighborhoods that make up White Plains. Use it as a starting point for getting oriented to the city.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <figure
+      class="about-photo map-figure"
+      id="wpcna-map"
+      data-map-w="{{ mapBoxes.imageWidth }}"
+      data-map-h="{{ mapBoxes.imageHeight }}"
+      style="margin:0 auto;max-width:900px;position:relative"
+    >
+      <img
+        src="{{ '/assets/img/neighborhood-map.png' | withPrefix }}"
+        alt="Map of White Plains showing neighborhood boundaries and labels."
+        loading="eager"
+        style="width:100%;height:auto;border-radius:var(--radius-lg);display:block"
+      >
+      <div class="map-highlight" id="wpcna-map-highlight" aria-hidden="true"></div>
+      <figcaption id="wpcna-map-caption" style="text-align:center;font-size:0.9rem;color:var(--ink-muted);margin-top:0.75rem">
+        Map of White Plains neighborhoods.
+      </figcaption>
+    </figure>
+
+    <div class="spotlight" style="margin-top:2.5rem">
+      <div>
+        <p class="eyebrow">Explore</p>
+        <h2>Browse the neighborhoods</h2>
+        <p>WPCNA tracks every named neighborhood across White Plains, from Downtown to the hills on the city's edge. Each one has its own page with photos, history, and what makes it distinct.</p>
+        <p style="margin-top:1rem"><a class="btn btn-primary" href="{{ '/neighborhoods/' | withPrefix }}">All neighborhoods</a></p>
+      </div>
+      <div class="spotlight-card">
+        <p class="eyebrow">About</p>
+        <h3>Why neighborhoods matter</h3>
+        <p>Each neighborhood has its own character, concerns, and priorities. WPCNA exists to help those neighborhoods stay connected to each other and to the city.</p>
+        <a class="btn btn-outline btn-block" href="{{ '/about/' | withPrefix }}" style="margin-top:0.75rem">About WPCNA</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .map-figure { position: relative; }
+  .map-highlight {
+    position: absolute;
+    left: 0; top: 0; width: 0; height: 0;
+    border: 3px solid #ff6b35;
+    border-radius: 4px;
+    box-shadow:
+      0 0 0 9999px rgba(12, 18, 32, 0.32),
+      0 0 22px rgba(255, 107, 53, 0.85);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .map-highlight.is-active {
+    opacity: 1;
+    animation: wpcna-map-pulse 2s ease-in-out infinite;
+  }
+  @keyframes wpcna-map-pulse {
+    0%, 100% { box-shadow: 0 0 0 9999px rgba(12,18,32,0.32), 0 0 18px rgba(255,107,53,0.6); }
+    50%      { box-shadow: 0 0 0 9999px rgba(12,18,32,0.32), 0 0 34px rgba(255,107,53,1); }
+  }
+</style>
+<script id="wpcna-map-boxes" type="application/json">{{ mapBoxes.boxes | dump | safe }}</script>
+<script>
+(function () {
+  var fig = document.getElementById('wpcna-map');
+  var hl = document.getElementById('wpcna-map-highlight');
+  var cap = document.getElementById('wpcna-map-caption');
+  var dataEl = document.getElementById('wpcna-map-boxes');
+  if (!fig || !hl || !dataEl) return;
+  var boxes;
+  try { boxes = JSON.parse(dataEl.textContent); } catch (e) { return; }
+  var mapW = parseFloat(fig.dataset.mapW);
+  var mapH = parseFloat(fig.dataset.mapH);
+  if (!mapW || !mapH) return;
+
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('highlight');
+  var hash = (window.location.hash || '').replace('#', '');
+  if (!slug && hash) slug = hash;
+  if (!slug) return;
+  var box = boxes[slug];
+  if (!box) return;
+
+  var x = box[0], y = box[1], w = box[2], h = box[3];
+  hl.style.left   = (x / mapW * 100) + '%';
+  hl.style.top    = (y / mapH * 100) + '%';
+  hl.style.width  = (w / mapW * 100) + '%';
+  hl.style.height = (h / mapH * 100) + '%';
+  hl.classList.add('is-active');
+
+  var name = slug.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  if (cap) cap.textContent = 'Highlighted: ' + name;
+
+  // Scroll the map into view so users see the highlight immediately
+  requestAnimationFrame(function () {
+    fig.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Fulton Street neighborhood, West Side and Near-Downtown Neighborhoods, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2c1e"/>
+      <stop offset="0.6" stop-color="#166534"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <rect x="0" y="285" width="1600" height="615" fill="url(#g2)" opacity="0.45"/>
+        <circle cx="204" cy="285" r="280" fill="#fde68a" opacity="0.4"/>
+  <rect x="0" y="706" width="47" height="194" fill="#000" opacity="0.35"/><rect x="51" y="732" width="65" height="168" fill="#000" opacity="0.35"/><rect x="120" y="650" width="27" height="250" fill="#000" opacity="0.35"/><rect x="151" y="668" width="69" height="232" fill="#000" opacity="0.35"/><rect x="224" y="722" width="27" height="178" fill="#000" opacity="0.35"/><rect x="255" y="688" width="95" height="212" fill="#000" opacity="0.35"/><rect x="354" y="650" width="39" height="250" fill="#000" opacity="0.35"/><rect x="397" y="668" width="31" height="232" fill="#000" opacity="0.35"/><rect x="432" y="682" width="27" height="218" fill="#000" opacity="0.35"/><rect x="463" y="688" width="67" height="212" fill="#000" opacity="0.35"/><rect x="534" y="618" width="27" height="282" fill="#000" opacity="0.35"/><rect x="565" y="692" width="41" height="208" fill="#000" opacity="0.35"/><rect x="610" y="690" width="83" height="210" fill="#000" opacity="0.35"/><rect x="697" y="736" width="89" height="164" fill="#000" opacity="0.35"/><rect x="790" y="662" width="47" height="238" fill="#000" opacity="0.35"/><rect x="841" y="640" width="67" height="260" fill="#000" opacity="0.35"/><rect x="912" y="722" width="81" height="178" fill="#000" opacity="0.35"/><rect x="997" y="656" width="85" height="244" fill="#000" opacity="0.35"/><rect x="1086" y="642" width="73" height="258" fill="#000" opacity="0.35"/><rect x="1163" y="648" width="59" height="252" fill="#000" opacity="0.35"/><rect x="1226" y="618" width="53" height="282" fill="#000" opacity="0.35"/><rect x="1283" y="712" width="67" height="188" fill="#000" opacity="0.35"/><rect x="1354" y="658" width="33" height="242" fill="#000" opacity="0.35"/><rect x="1391" y="676" width="63" height="224" fill="#000" opacity="0.35"/><rect x="1458" y="666" width="95" height="234" fill="#000" opacity="0.35"/><rect x="1557" y="668" width="63" height="232" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">West Side and Near-Downtown Neighborhoods</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Fulton Street</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fde68a" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>

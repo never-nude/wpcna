@@ -9,16 +9,24 @@
       <ul>
         <li>{{ site.contactName }}</li>
         <li>{{ site.location }}</li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="mailto:{{ site.emailMailto }}">{{ site.email }}</a></li>
       </ul>
     </div>
     <div>
-      <h3>Community</h3>
+      <h3>WPCNA</h3>
+      <ul>
+        <li><a href="{{ '/agendas/' | withPrefix }}">Meeting agendas &amp; minutes</a></li>
+        <li><a href="{{ '/workshops/' | withPrefix }}">Workshop materials</a></li>
+        <li><a href="{{ '/neighborhood-map/' | withPrefix }}">Neighborhood map</a></li>
+        <li><a href="{{ '/about/' | withPrefix }}">About WPCNA</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Community calendars</h3>
       <ul>
         {% for link in site.communityChannels %}
           <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></li>
         {% endfor %}
-        <li><a href="{{ site.currentSiteUrl }}" target="_blank" rel="noopener">WPCNA main site</a></li>
       </ul>
     </div>
   </div>

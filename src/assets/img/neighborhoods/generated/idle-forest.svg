@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Idle Forest neighborhood, Gedney and the South Side, White Plains">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2a2a"/>
+      <stop offset="0.6" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <path d="M0,602 Q899,274 1600,766 L1600,900 L0,900 Z" fill="url(#g2)" opacity="0.5"/>
+        <circle cx="899" cy="602" r="164" fill="#fcd34d" opacity="0.4"/>
+  <rect x="0" y="613" width="40" height="287" fill="#000" opacity="0.35"/><rect x="44" y="731" width="54" height="169" fill="#000" opacity="0.35"/><rect x="102" y="701" width="80" height="199" fill="#000" opacity="0.35"/><rect x="186" y="627" width="60" height="273" fill="#000" opacity="0.35"/><rect x="250" y="617" width="82" height="283" fill="#000" opacity="0.35"/><rect x="336" y="675" width="76" height="225" fill="#000" opacity="0.35"/><rect x="416" y="673" width="26" height="227" fill="#000" opacity="0.35"/><rect x="446" y="699" width="86" height="201" fill="#000" opacity="0.35"/><rect x="536" y="657" width="60" height="243" fill="#000" opacity="0.35"/><rect x="600" y="643" width="56" height="257" fill="#000" opacity="0.35"/><rect x="660" y="629" width="60" height="271" fill="#000" opacity="0.35"/><rect x="724" y="743" width="44" height="157" fill="#000" opacity="0.35"/><rect x="772" y="697" width="92" height="203" fill="#000" opacity="0.35"/><rect x="868" y="699" width="88" height="201" fill="#000" opacity="0.35"/><rect x="960" y="637" width="62" height="263" fill="#000" opacity="0.35"/><rect x="1026" y="735" width="62" height="165" fill="#000" opacity="0.35"/><rect x="1092" y="705" width="50" height="195" fill="#000" opacity="0.35"/><rect x="1146" y="687" width="28" height="213" fill="#000" opacity="0.35"/><rect x="1178" y="673" width="84" height="227" fill="#000" opacity="0.35"/><rect x="1266" y="743" width="46" height="157" fill="#000" opacity="0.35"/><rect x="1316" y="697" width="78" height="203" fill="#000" opacity="0.35"/><rect x="1398" y="723" width="60" height="177" fill="#000" opacity="0.35"/><rect x="1462" y="721" width="28" height="179" fill="#000" opacity="0.35"/><rect x="1494" y="655" width="84" height="245" fill="#000" opacity="0.35"/><rect x="1582" y="661" width="28" height="239" fill="#000" opacity="0.35"/>
+  <g font-family="DM Sans, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" fill="#ffffff">
+    <text x="80" y="200" font-size="34" font-weight="500" opacity="0.85">White Plains</text>
+    <text x="80" y="200" dx="280" font-size="34" font-weight="500" opacity="0.6">Gedney and the South Side</text>
+    <text x="80" y="380" font-size="116" font-weight="700" letter-spacing="-1">Idle Forest</text>
+    <line x1="80" y1="430" x2="320" y2="430" stroke="#fcd34d" stroke-width="8"/>
+    <text x="80" y="500" font-size="32" font-weight="500" opacity="0.85">A WPCNA neighborhood guide</text>
+  </g>
+</svg>
