@@ -50,6 +50,22 @@ eleventyComputed:
           <p>{{ neighborhood.groupDescription }}</p>
           <p>{{ neighborhood.orientationNote }}</p>
         </div>
+
+        {% set mapBox = mapBoxes.boxes[neighborhood.slug] %}
+        {% if mapBox %}
+          <div class="detail-minimap">
+            <h3>On the map</h3>
+            <a class="minimap-frame" href="{{ ('/neighborhood-map/?highlight=' + neighborhood.slug) | withPrefix }}" aria-label="View {{ neighborhood.name }} on the full neighborhood map">
+              <img src="{{ '/assets/img/neighborhood-map.png' | withPrefix }}" alt="Static map of White Plains with {{ neighborhood.name }} highlighted." loading="lazy">
+              <span
+                class="minimap-highlight"
+                style="left:{{ (mapBox[0] / mapBoxes.imageWidth * 100) }}%;top:{{ (mapBox[1] / mapBoxes.imageHeight * 100) }}%;width:{{ (mapBox[2] / mapBoxes.imageWidth * 100) }}%;height:{{ (mapBox[3] / mapBoxes.imageHeight * 100) }}%;"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <p class="minimap-caption">{{ neighborhood.name }} shown on the White Plains neighborhood map. <a href="{{ ('/neighborhood-map/?highlight=' + neighborhood.slug) | withPrefix }}">Open full map →</a></p>
+          </div>
+        {% endif %}
       </article>
 
       <aside class="detail-sidebar">

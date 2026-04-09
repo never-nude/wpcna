@@ -1035,3 +1035,46 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); }
   content: "📍";
   font-size: 1rem;
 }
+
+/* Mini-map with highlight on neighborhood detail pages */
+.detail-minimap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e5e7eb);
+}
+.detail-minimap h3 { margin-bottom: 0.75rem; }
+.minimap-frame {
+  position: relative;
+  display: block;
+  max-width: 540px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border, #e5e7eb);
+  box-shadow: 0 2px 14px rgba(12,18,32,0.06);
+  background: #f2f4f8;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.minimap-frame:hover {
+  box-shadow: 0 4px 22px rgba(12,18,32,0.12);
+  transform: translateY(-1px);
+}
+.minimap-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.minimap-highlight {
+  position: absolute;
+  border: 3px solid #ff6b35;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 9999px rgba(12, 18, 32, 0.30),
+    0 0 16px rgba(255, 107, 53, 0.85);
+  pointer-events: none;
+}
+.minimap-caption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  max-width: 540px;
+}
