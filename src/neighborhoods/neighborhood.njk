@@ -51,15 +51,17 @@ eleventyComputed:
           <p>{{ neighborhood.orientationNote }}</p>
         </div>
 
-        {% set mapPoly = neighborhoodPolygons.polygons[neighborhood.slug] %}
-        {% if mapPoly %}
+        {% set mapBox = mapBoxes.boxes[neighborhood.slug] %}
+        {% if mapBox %}
           <div class="detail-minimap">
             <h3>On the map</h3>
             <a class="minimap-frame" href="{{ ('/neighborhood-map/?highlight=' + neighborhood.slug) | withPrefix }}" aria-label="View {{ neighborhood.name }} on the full neighborhood map">
-              <img src="{{ '/assets/img/neighborhood-map.png' | withPrefix }}" alt="Static map of White Plains with {{ neighborhood.name }} outlined." loading="lazy">
-              <svg class="minimap-svg" viewBox="0 0 {{ neighborhoodPolygons.imageWidth }} {{ neighborhoodPolygons.imageHeight }}" preserveAspectRatio="none" aria-hidden="true">
-                <polygon points="{% for pt in mapPoly %}{{ pt[0] }},{{ pt[1] }} {% endfor %}" class="minimap-polygon"></polygon>
-              </svg>
+              <img src="{{ '/assets/img/neighborhood-map.png' | withPrefix }}" alt="Static map of White Plains with {{ neighborhood.name }} highlighted." loading="lazy">
+              <span
+                class="minimap-highlight"
+                style="left:{{ (mapBox[0] / mapBoxes.imageWidth * 100) }}%;top:{{ (mapBox[1] / mapBoxes.imageHeight * 100) }}%;width:{{ (mapBox[2] / mapBoxes.imageWidth * 100) }}%;height:{{ (mapBox[3] / mapBoxes.imageHeight * 100) }}%;"
+                aria-hidden="true"
+              ></span>
             </a>
             <p class="minimap-caption">{{ neighborhood.name }} shown on the White Plains neighborhood map. <a href="{{ ('/neighborhood-map/?highlight=' + neighborhood.slug) | withPrefix }}">Open full map →</a></p>
           </div>

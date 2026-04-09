@@ -1,66 +1,54 @@
 // Bounding boxes for each neighborhood on the static neighborhood map image.
-// Coordinates are in source-image pixels on /assets/img/neighborhood-map.png
-// (1856 × 2560). These are approximate visual estimates read directly from the
-// labeled polygons on the map; adjust values here to fine-tune highlight
-// placement. Format: [x, y, width, height].
+// Boxes are the axis-aligned extent of the (Voronoi-derived) polygon for each
+// neighborhood, guaranteed to cover the whole area even where boxes overlap.
+// Format: [x, y, width, height] in source-image pixels on
+// /assets/img/neighborhood-map.png.
 module.exports = {
   imageWidth: 1856,
   imageHeight: 2560,
   boxes: {
-    // North & reservoir area
-    "white-plains-reservoir": [640, 240, 320, 440],
-    "north-broadway":         [520, 600, 220, 300],
-    "westminster-ridge":      [720, 640, 200, 220],
-    "woodcrest-heights":      [860, 720, 240, 240],
-    "good-counsel":           [660, 760, 220, 200],
-    "ferris-avenue":          [400, 820, 200, 220],
-    "bronx-river":             [420, 880, 240, 220],
-    "fulton-street":           [260, 940, 220, 220],
-    "church-street":           [540, 920, 220, 160],
-    "eastview":                [780, 960, 260, 260],
-
-    // Central / Downtown cluster
-    "battle-hill":             [340, 1080, 260, 220],
-    "urban-core":              [580, 1080, 240, 140], // not a slug, placeholder
-    "downtown":                [580, 1080, 240, 140],
-    "government-center":       [560, 1160, 220, 120],
-    "winbrook":                [580, 1200, 200, 100],
-    "health-center":           [600, 1240, 200, 100],
-    "gateway":                 [540, 1280, 220, 100],
-    "fisher-hill":             [400, 1220, 200, 140],
-    "kirkbride-asylum":        [790, 1200, 280, 220],
-    "old-oak-ridge":           [960, 1180, 260, 240],
-
-    // East / Westchester Avenue corridor
-    "westchester-avenue":      [1100, 1280, 680, 400],
-
-    // South / Gedney cluster
-    "old-mamaroneck-road":     [520, 1320, 280, 120],
-    "highlands":               [420, 1400, 280, 220],
-    "bryant-gardens":          [780, 1420, 180, 100],
-    "burke-institute":         [840, 1470, 160, 100],
-    "havilands-manor":         [1060, 1500, 280, 220],
-    "prospect-park":           [300, 1520, 240, 260],
-    "gedney-park":             [540, 1540, 260, 200],
-    "gedney-farms":            [720, 1580, 280, 280],
-    "north-street":            [880, 1660, 360, 320],
-
-    // South interior
-    "idle-forest":             [340, 1720, 200, 160],
-    "gedney-manor":            [440, 1720, 200, 120],
-    "gedney-circle":           [640, 1720, 180, 120],
-    "soundview":               [280, 1780, 200, 140],
-    "colonial-corners":        [440, 1800, 220, 140],
-    "holbrooke":               [700, 1800, 180, 120],
-    "gedney-commons":          [600, 1790, 200, 100],
-    "gedney-meadows":          [800, 1840, 240, 180],
-    "brook-hills":             [860, 1900, 200, 160],
-    "rocky-dell":              [400, 1860, 240, 160],
-    "reynal-park":             [560, 1900, 220, 180],
-
-    // Far south
-    "hillair-circle":          [460, 1980, 300, 180],
-    "saxon-woods":             [600, 2120, 280, 180],
-    "rosedale":                [800, 2050, 280, 260]
+    "battle-hill": [230, 1064, 330, 290],
+    "bronx-river": [418, 918, 184, 196],
+    "brook-hills": [878, 1826, 304, 230],
+    "bryant-gardens": [750, 1354, 228, 244],
+    "burke-institute": [820, 1414, 290, 198],
+    "church-street": [586, 872, 172, 226],
+    "colonial-corners": [544, 1778, 124, 112],
+    "downtown": [584, 1012, 242, 252],
+    "eastview": [752, 948, 228, 280],
+    "ferris-avenue": [366, 714, 306, 226],
+    "fisher-hill": [242, 1226, 342, 220],
+    "fulton-street": [184, 992, 292, 338],
+    "gateway": [548, 1316, 164, 152],
+    "gedney-circle": [726, 1578, 194, 202],
+    "gedney-commons": [736, 1752, 192, 166],
+    "gedney-farms": [845, 1579, 255, 215],
+    "gedney-manor": [608, 1642, 136, 178],
+    "gedney-meadows": [838, 1770, 202, 218],
+    "gedney-park": [572, 1476, 250, 198],
+    "good-counsel": [650, 828, 242, 202],
+    "government-center": [540, 1084, 190, 160],
+    "havilands-manor": [1084, 1350, 301, 432],
+    "health-center": [566, 1276, 198, 88],
+    "highlands": [424, 1400, 240, 230],
+    "hillair-circle": [732, 1940, 178, 164],
+    "holbrooke": [794, 1758, 168, 206],
+    "idle-forest": [478, 1614, 146, 190],
+    "kirkbride-asylum": [778, 1174, 246, 258],
+    "north-broadway": [466, 584, 332, 268],
+    "north-street": [996, 1580, 480, 360],
+    "old-mamaroneck-road": [628, 1262, 196, 238],
+    "old-oak-ridge": [975, 1174, 329, 304],
+    "prospect-park": [274, 1404, 308, 280],
+    "reynal-park": [644, 1858, 186, 180],
+    "rocky-dell": [586, 1816, 138, 150],
+    "rosedale": [1022, 1916, 413, 492],
+    "saxon-woods": [864, 2004, 196, 250],
+    "soundview": [646, 1674, 148, 200],
+    "westchester-avenue": [1258, 1308, 276, 578],
+    "westminster-ridge": [668, 642, 218, 248],
+    "white-plains-reservoir": [638, 130, 340, 532],
+    "winbrook": [544, 1214, 254, 78],
+    "woodcrest-heights": [856, 632, 226, 312],
   }
 };

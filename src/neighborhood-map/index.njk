@@ -16,8 +16,8 @@ metaDescription: A map of the neighborhoods that make up White Plains, New York.
     <figure
       class="about-photo map-figure"
       id="wpcna-map"
-      data-map-w="{{ neighborhoodPolygons.imageWidth }}"
-      data-map-h="{{ neighborhoodPolygons.imageHeight }}"
+      data-map-w="{{ mapBoxes.imageWidth }}"
+      data-map-h="{{ mapBoxes.imageHeight }}"
       style="margin:0 auto;max-width:900px;position:relative"
     >
       <img
@@ -26,15 +26,7 @@ metaDescription: A map of the neighborhoods that make up White Plains, New York.
         loading="eager"
         style="width:100%;height:auto;border-radius:var(--radius-lg);display:block"
       >
-      <svg
-        class="map-highlight-svg"
-        id="wpcna-map-svg"
-        viewBox="0 0 {{ neighborhoodPolygons.imageWidth }} {{ neighborhoodPolygons.imageHeight }}"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <polygon id="wpcna-map-polygon" points=""></polygon>
-      </svg>
+      <div class="map-highlight" id="wpcna-map-highlight" aria-hidden="true"></div>
       <figcaption id="wpcna-map-caption" style="text-align:center;font-size:0.9rem;color:var(--ink-muted);margin-top:0.75rem">
         Map of White Plains neighborhoods.
       </figcaption>
@@ -59,66 +51,61 @@ metaDescription: A map of the neighborhoods that make up White Plains, New York.
 
 <style>
   .map-figure { position: relative; }
-  .map-highlight-svg {
+  .map-highlight {
     position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: calc(100% - 0px);
+    left: 0; top: 0; width: 0; height: 0;
+    border: 4px solid #ffeb00;
+    border-radius: 4px;
+    box-shadow:
+      0 0 0 9999px rgba(12, 18, 32, 0.35),
+      0 0 0 2px #000,
+      0 0 18px 3px rgba(0, 0, 0, 0.85);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.2s ease;
   }
-  .map-figure .map-highlight-svg { height: auto; }
-  /* Make the SVG overlay stretch to match the image */
-  #wpcna-map { position: relative; }
-  #wpcna-map img { position: relative; z-index: 0; }
-  #wpcna-map .map-highlight-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  .map-highlight.is-active {
+    opacity: 1;
+    animation: wpcna-map-pulse 2s ease-in-out infinite;
   }
-  #wpcna-map .map-highlight-svg.is-active { opacity: 1; }
-  #wpcna-map-polygon {
-    fill: rgba(255, 235, 0, 0.32);
-    stroke: #ffeb00;
-    stroke-width: 12;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    paint-order: stroke fill;
-    filter: drop-shadow(0 0 3px #000) drop-shadow(0 0 14px rgba(0, 0, 0, 0.9));
-    animation: wpcna-poly-pulse 2s ease-in-out infinite;
-  }
-  @keyframes wpcna-poly-pulse {
-    0%, 100% { fill-opacity: 0.25; }
-    50%      { fill-opacity: 0.50; }
+  @keyframes wpcna-map-pulse {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 235, 0, 0.55)); }
+    50%      { filter: drop-shadow(0 0 16px rgba(255, 235, 0, 1)); }
   }
 </style>
-<script id="wpcna-map-polygons" type="application/json">{{ neighborhoodPolygons.polygons | dump | safe }}</script>
+<script id="wpcna-map-boxes" type="application/json">{{ mapBoxes.boxes | dump | safe }}</script>
 <script>
 (function () {
   var fig = document.getElementById('wpcna-map');
-  var svg = document.getElementById('wpcna-map-svg');
-  var poly = document.getElementById('wpcna-map-polygon');
+  var hl = document.getElementById('wpcna-map-highlight');
   var cap = document.getElementById('wpcna-map-caption');
-  var dataEl = document.getElementById('wpcna-map-polygons');
-  if (!fig || !svg || !poly || !dataEl) return;
-  var polygons;
-  try { polygons = JSON.parse(dataEl.textContent); } catch (e) { return; }
+  var dataEl = document.getElementById('wpcna-map-boxes');
+  if (!fig || !hl || !dataEl) return;
+  var boxes;
+  try { boxes = JSON.parse(dataEl.textContent); } catch (e) { return; }
+  var mapW = parseFloat(fig.dataset.mapW);
+  var mapH = parseFloat(fig.dataset.mapH);
+  if (!mapW || !mapH) return;
 
   var params = new URLSearchParams(window.location.search);
   var slug = params.get('highlight');
   var hash = (window.location.hash || '').replace('#', '');
   if (!slug && hash) slug = hash;
-  if (!slug || !polygons[slug]) return;
+  if (!slug) return;
+  var box = boxes[slug];
+  if (!box) return;
 
-  var pts = polygons[slug];
-  poly.setAttribute('points', pts.map(function (p) { return p[0] + ',' + p[1]; }).join(' '));
-  svg.classList.add('is-active');
+  var x = box[0], y = box[1], w = box[2], h = box[3];
+  hl.style.left   = (x / mapW * 100) + '%';
+  hl.style.top    = (y / mapH * 100) + '%';
+  hl.style.width  = (w / mapW * 100) + '%';
+  hl.style.height = (h / mapH * 100) + '%';
+  hl.classList.add('is-active');
 
   var name = slug.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   if (cap) cap.textContent = 'Highlighted: ' + name;
 
+  // Scroll the map into view so users see the highlight immediately
   requestAnimationFrame(function () {
     fig.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
