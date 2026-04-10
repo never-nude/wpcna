@@ -123,10 +123,10 @@
     "neighborhoodName": "Fisher Hill",
     "title": "Fisher Hill local photo set",
     "sourceUrl": "/about/",
-    "localFilename": "photos/fisher-hill-hero.jpg",
-    "cardLocalFilename": "photos/fisher-hill-card.jpg",
-    "altText": "Stone archway and entrance to a home on Fisher Hill at dusk.",
-    "cardAltText": "Residential street on Fisher Hill looking toward Downtown White Plains, with houses in the foreground and downtown high-rises rising above.",
+    "localFilename": "photos/fisher-hill-card.jpg",
+    "cardLocalFilename": "photos/fisher-hill-hero.jpg",
+    "altText": "Residential street on Fisher Hill looking toward Downtown White Plains, with houses in the foreground and downtown high-rises rising above.",
+    "cardAltText": "Stone archway and entrance to a home on Fisher Hill at dusk.",
     "photographer": "WPCNA",
     "attributionText": "WPCNA",
     "attributionUrl": "/about/",
@@ -135,7 +135,7 @@
     "attributionRequired": false,
     "matchType": "direct",
     "status": "photo",
-    "note": "User-provided Fisher Hill photo set: skyline street view for cards, architectural dusk view for the detail-page hero."
+    "note": "User-provided Fisher Hill photo set: architectural dusk view for cards, skyline street view for the detail-page hero."
   },
   {
     "slug": "highlands",
