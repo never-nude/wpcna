@@ -54,7 +54,7 @@
     <a href="{{ neighborhood.detailUrl | withPrefix }}">
       {% if neighborhood.hero %}
         <span class="neighborhood-card-img">
-          <img src="{{ neighborhood.hero.imagePath | withPrefix }}" alt="{{ neighborhood.hero.altText }}" loading="lazy">
+          <img src="{{ (neighborhood.hero.cardImagePath or neighborhood.hero.imagePath) | withPrefix }}" alt="{{ neighborhood.hero.cardAltText or neighborhood.hero.altText }}" loading="lazy">
         </span>
       {% endif %}
       <span class="neighborhood-card-body">

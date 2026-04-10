@@ -80,7 +80,11 @@ const heroBySlug = Object.fromEntries(
       hero.slug,
       {
         ...hero,
-        imagePath: `/assets/img/neighborhoods/${hero.localFilename}`
+        imagePath: `/assets/img/neighborhoods/${hero.localFilename}`,
+        cardImagePath: hero.cardLocalFilename
+          ? `/assets/img/neighborhoods/${hero.cardLocalFilename}`
+          : `/assets/img/neighborhoods/${hero.localFilename}`,
+        cardAltText: hero.cardAltText || hero.altText
       }
     ])
 );

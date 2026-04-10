@@ -21,7 +21,7 @@ This file tracks the approved neighborhood hero image assignments for the WPCNA 
 | Winbrook | Winbrook Houses, White Plains, New York. LOC gsc.5a21513 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Winbrook_Houses,_White_Plains,_New_York._LOC_gsc.5a21513.jpg) | Public domain | direct | approved |
 | Gateway | White Plains Station Renewal Project (51648065990) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:White_Plains_Station_Renewal_Project_(51648065990).jpg) | CC BY 2.0 | landmark | approved |
 | Battle Hill | WhitePlainsBattleHill01 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WhitePlainsBattleHill01.jpg) | CC BY-SA 4.0 | direct | approved |
-| Fisher Hill | City of White Plains, Jul 2012 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:City_of_White_Plains,_Jul_2012.jpg) | Public domain | fallback | fallback |
+| Fisher Hill | Fisher Hill local photo set | local user-provided Fisher Hill photos | Site photo | direct | approved |
 | Highlands | City of White Plains, Jul 2012 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:City_of_White_Plains,_Jul_2012.jpg) | Public domain | fallback | fallback |
 | Fulton Street | City of White Plains, Jul 2012 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:City_of_White_Plains,_Jul_2012.jpg) | Public domain | fallback | fallback |
 | Ferris Avenue | City of White Plains, Jul 2012 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:City_of_White_Plains,_Jul_2012.jpg) | Public domain | fallback | fallback |

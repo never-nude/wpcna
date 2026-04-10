@@ -61,6 +61,19 @@ This system uses a mix of:
 
 Attribution is shown directly on neighborhood pages below the hero image.
 
+### Fisher Hill local photos
+
+- Files:
+  - `src/assets/img/neighborhoods/photos/fisher-hill-card.jpg`
+  - `src/assets/img/neighborhoods/photos/fisher-hill-hero.jpg`
+- Source: user-provided local Fisher Hill photos
+- Original files:
+  - `/Users/michael/Pictures/Photos Library.photoslibrary/resources/derivatives/3/30A44E85-116D-4AC0-A999-E8B9A6AC8F0F_1_105_c.jpeg`
+  - `/Users/michael/Pictures/Photos Library.photoslibrary/resources/derivatives/3/3A62C0FA-86F4-4767-8BFE-320E1D470F92_1_105_c.jpeg`
+- Notes:
+  - The street view is used on Fisher Hill neighborhood cards.
+  - The archway/house image is used as the Fisher Hill detail-page hero.
+
 ## Replacement Workflow
 
 1. Source a neighborhood image with clearly reusable rights.
