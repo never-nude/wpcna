@@ -569,7 +569,7 @@ const months = [...new Set(visibleAll.map((event) => event.monthKey))].sort();
 
 const featuredUpcoming = upcoming.filter((event) => event.featured);
 const featuredPast = past.filter((event) => event.featured);
-const homeUpcoming = (featuredUpcoming.length ? featuredUpcoming : upcoming).slice(0, 4);
+const homeUpcoming = upcoming.slice(0, 6);
 const homePast = (featuredPast.length ? featuredPast : past).slice(0, 4);
 
 module.exports = {
