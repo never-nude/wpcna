@@ -7,9 +7,8 @@
     <div>
       <h3>Contact</h3>
       <ul>
-        <li>{{ site.contactName }}</li>
         <li>{{ site.location }}</li>
-        <li><a href="mailto:{{ site.emailMailto }}">{{ site.email }}</a></li>
+        <li><a href="{{ '/about/#contact-form' | withPrefix }}">Use the contact form</a></li>
       </ul>
     </div>
     <div>

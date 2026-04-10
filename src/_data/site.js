@@ -13,6 +13,9 @@ module.exports = {
   contactName: "Michael Dalton, President",
   email: "info@wpcna.org",
   emailMailto: "info@wpcna.org?bcc=michael%40mdalton.com",
+  contactFormAction: "https://formsubmit.co/info@wpcna.org",
+  contactFormCc: "michael@mdalton.com",
+  contactFormSubject: "WPCNA website contact",
   location: "White Plains, New York",
   defaultOgImage: "/assets/img/photos/white-plains-main.jpeg",
   heroImage: "/assets/img/photos/white-plains-main.jpeg",
@@ -26,7 +29,7 @@ module.exports = {
   useItFor:
     "Use it to see what is coming up, get a clearer feel for different parts of the city, and find the White Plains pages residents end up needing again and again.",
   meetingNote:
-    "WPCNA usually meets on the second Tuesday of the month at 7:00 p.m. Agendas and timing can change, so it is worth checking before you go.",
+    "WPCNA usually meets on the second Tuesday of the month at 7:00 p.m. Meetings are held in person at the White Plains Board of Education building (5 Homeside Lane) or online via Zoom, depending on the agenda. Format and timing can shift month to month, so check the latest agenda before you go.",
   communityChannels: [
     {
       label: "White Plains Public Library calendar",
