@@ -1,0 +1,12 @@
+name = "wpcna-posting"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+
+# Secrets (set via `wrangler secret put`):
+#   RESEND_API_KEY    — API key from resend.com
+#   RECIPIENT_TO      — primary recipient (info@wpcna.org)
+#   RECIPIENT_CC      — CC recipient (never exposed to frontend)
+
+# Allowed origins for CORS — update after deploy
+[vars]
+ALLOWED_ORIGIN = "https://never-nude.github.io"
