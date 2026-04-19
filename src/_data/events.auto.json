@@ -871,7 +871,7 @@
     "externalUrl": "https://www.cityofwhiteplains.com/Calendar.aspx?EID=4250&month=4&year=2026&day=18&calType=0",
     "ctaLabel": "Open city page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "city calendar"
     ],
@@ -2270,6 +2270,37 @@
     "sourceUrl": "https://www.cityofwhiteplains.com/Calendar.aspx?EID=3605&month=6&year=2026&day=1&calType=0",
     "sourceLabel": "City calendar",
     "importSource": "city"
+  },
+  {
+    "id": "library-under-the-sea-vr-search-and-find-2026-06-02",
+    "slug": "library-under-the-sea-vr-search-and-find-2026-06-02",
+    "title": "Under the Sea: VR Search and Find!",
+    "category": "Learning",
+    "shortSummary": "Experience Virtual Reality (VR) without a headset in the Library's panoramic content room.",
+    "fullDescription": "Experience Virtual Reality (VR) without a headset in the Library's panoramic content room. Technology installed by Igloo Vision and funded by the Library Foundation/Optimum. Check the library page for registration, tickets, and any schedule updates.",
+    "startDate": "2026-06-02",
+    "endDate": "2026-06-02",
+    "startTime": "12:30",
+    "endTime": "13:00",
+    "locationName": "White Plains Public Library, The Igloo - Optimum Technology Room",
+    "locationAddress": "100 Martine Avenue, White Plains, NY 10601",
+    "image": "/assets/img/events/learning.svg",
+    "flyerPdf": null,
+    "externalUrl": "https://calendar.whiteplainslibrary.org/event/15773391",
+    "ctaLabel": "Open library page",
+    "featured": false,
+    "status": "upcoming",
+    "tags": [
+      "fun and games",
+      "digital technology",
+      "families",
+      "children",
+      "library"
+    ],
+    "organizer": "White Plains Public Library",
+    "sourceUrl": "https://calendar.whiteplainslibrary.org/event/15773391",
+    "sourceLabel": "Library calendar",
+    "importSource": "library"
   },
   {
     "id": "city-zoning-board-of-appeals-2026-06-03",
