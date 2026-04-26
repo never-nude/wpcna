@@ -1174,7 +1174,7 @@
     "externalUrl": "https://wpbid.com/events/downtown-white-plains-wing-walk-2026/",
     "ctaLabel": "Open event page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "downtown",
       "bid"
@@ -1202,7 +1202,7 @@
     "externalUrl": "https://calendar.whiteplainslibrary.org/event/14610200",
     "ctaLabel": "Open library page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "training and course instruction",
       "jobs and careers",
@@ -1236,7 +1236,7 @@
     "externalUrl": "https://calendar.whiteplainslibrary.org/event/15806613",
     "ctaLabel": "Open library page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "educational presentations",
       "books and authors",
@@ -2817,6 +2817,35 @@
     ],
     "organizer": "White Plains Public Library",
     "sourceUrl": "https://calendar.whiteplainslibrary.org/event/15962888",
+    "sourceLabel": "Library calendar",
+    "importSource": "library"
+  },
+  {
+    "id": "library-sustainable-eating-in-the-hudson-valley-2026-06-09",
+    "slug": "library-sustainable-eating-in-the-hudson-valley-2026-06-09",
+    "title": "Sustainable Eating in the Hudson Valley",
+    "category": "Learning",
+    "shortSummary": "Globalization has transformed the way we eat.",
+    "fullDescription": "Globalization has transformed the way we eat. The limitations of seasonality, geography, weather, and availability have largely been eliminated, allowing us to access foods from around the world without a second thought. But what effect does this have on the environment, local communities, regional cuisine, and culinary innovation? In this discussion, we will explore what it means to live and eat in the Hudson Valley. We will examine the power of food to catalyze change and to cultivate a deeper, more grounded sense of place. Check the library page for registration, tickets, and any schedule updates.",
+    "startDate": "2026-06-09",
+    "endDate": "2026-06-09",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "locationName": "White Plains Public Library, Auditorium",
+    "locationAddress": "100 Martine Avenue, White Plains, NY 10601",
+    "image": "/assets/img/events/learning.svg",
+    "flyerPdf": null,
+    "externalUrl": "https://calendar.whiteplainslibrary.org/event/15922220",
+    "ctaLabel": "Open library page",
+    "featured": false,
+    "status": "upcoming",
+    "tags": [
+      "educational presentations",
+      "adults",
+      "library"
+    ],
+    "organizer": "White Plains Public Library",
+    "sourceUrl": "https://calendar.whiteplainslibrary.org/event/15922220",
     "sourceLabel": "Library calendar",
     "importSource": "library"
   },
