@@ -1474,7 +1474,7 @@
     "externalUrl": "https://calendar.whiteplainslibrary.org/event/13366586",
     "ctaLabel": "Open library page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "performing arts",
       "fun and games",
@@ -1507,7 +1507,7 @@
     "externalUrl": "https://calendar.whiteplainslibrary.org/event/16206452",
     "ctaLabel": "Open library page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "educational presentations",
       "adults",
@@ -1536,7 +1536,7 @@
     "externalUrl": "https://calendar.whiteplainslibrary.org/event/15163106",
     "ctaLabel": "Open library page",
     "featured": false,
-    "status": "upcoming",
+    "status": "past",
     "tags": [
       "training and course instruction",
       "jobs and careers",
@@ -3086,6 +3086,36 @@
     "importSource": "city"
   },
   {
+    "id": "library-rev250-westchester-county-in-the-american-revolution-2026-06-11",
+    "slug": "library-rev250-westchester-county-in-the-american-revolution-2026-06-11",
+    "title": "Rev250: Westchester County in the American Revolution",
+    "category": "Learning",
+    "shortSummary": "From the publisher's website: \"After the 1776 Battle of White Plains, Westchester County became known as the 'Neutral Ground.' But there would be no peace here.",
+    "fullDescription": "From the publisher's website: \"After the 1776 Battle of White Plains, Westchester County became known as the 'Neutral Ground.' But there would be no peace here. Occupied by neither side, it was a place where no one could remain neutral amid clashes by detachments of the contending armies, as well as violence by groups of bandits, vigilantes and partisans...Local historian Stephen Paul DeVillo details the colorful personalities and diverse military units that shaped the course of the conflict.\" Check the library page for registration, tickets, and any schedule updates.",
+    "startDate": "2026-06-11",
+    "endDate": "2026-06-11",
+    "startTime": "19:00",
+    "endTime": "20:30",
+    "locationName": "White Plains Public Library, Auditorium",
+    "locationAddress": "100 Martine Avenue, White Plains, NY 10601",
+    "image": "/assets/img/events/learning.svg",
+    "flyerPdf": null,
+    "externalUrl": "https://calendar.whiteplainslibrary.org/event/15321863",
+    "ctaLabel": "Open library page",
+    "featured": false,
+    "status": "upcoming",
+    "tags": [
+      "history & genealogy",
+      "educational presentations",
+      "adults",
+      "library"
+    ],
+    "organizer": "White Plains Public Library",
+    "sourceUrl": "https://calendar.whiteplainslibrary.org/event/15321863",
+    "sourceLabel": "Library calendar",
+    "importSource": "library"
+  },
+  {
     "id": "city-soccer-fest-opening-ceremony-presentation-2026-06-11",
     "slug": "city-soccer-fest-opening-ceremony-presentation-2026-06-11",
     "title": "Soccer Fest - Opening Ceremony Presentation",
@@ -3168,6 +3198,37 @@
     "sourceUrl": "https://www.cityofwhiteplains.com/Calendar.aspx?EID=4255&month=6&year=2026&day=13&calType=0",
     "sourceLabel": "City calendar",
     "importSource": "city"
+  },
+  {
+    "id": "library-rev250-daughters-of-the-american-revolution-progam-2026-06-13",
+    "slug": "library-rev250-daughters-of-the-american-revolution-progam-2026-06-13",
+    "title": "Rev250: Daughters of the American Revolution progam",
+    "category": "Learning",
+    "shortSummary": "Program given by the White Plains Chapter of the Daughters of the American Revolution.",
+    "fullDescription": "Program given by the White Plains Chapter of the Daughters of the American Revolution. Description to come. Check the library page for registration, tickets, and any schedule updates.",
+    "startDate": "2026-06-13",
+    "endDate": "2026-06-13",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "locationName": "White Plains Public Library, Auditorium",
+    "locationAddress": "100 Martine Avenue, White Plains, NY 10601",
+    "image": "/assets/img/events/learning.svg",
+    "flyerPdf": null,
+    "externalUrl": "https://calendar.whiteplainslibrary.org/event/15978929",
+    "ctaLabel": "Open library page",
+    "featured": false,
+    "status": "upcoming",
+    "tags": [
+      "history & genealogy",
+      "educational presentations",
+      "adults about 55 and over",
+      "adults",
+      "library"
+    ],
+    "organizer": "White Plains Public Library",
+    "sourceUrl": "https://calendar.whiteplainslibrary.org/event/15978929",
+    "sourceLabel": "Library calendar",
+    "importSource": "library"
   },
   {
     "id": "city-soccer-fest-soccer-video-game-tournament-2026-06-13",
